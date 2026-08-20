@@ -30,7 +30,7 @@ export const CATEGORY_FALLBACKS = {
   },
   'water-conditioner': {
     name: 'Water Conditioner',
-    image: 'assets/products/water-treatments/4.avif',
+    image: 'assets/products/water-treatments/4.webp',
     description:
       'Our water conditioners prevent limescale build-up in plumbing by changing the chemical make-up of the water — a salt-free alternative to a softener that uses no water and produces no wastewater during operation.',
     whatsappText: 'Hello, I would like to enquire about the Water Conditioner.',
