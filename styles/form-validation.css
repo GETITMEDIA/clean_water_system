@@ -1,0 +1,65 @@
+/* =========================================================
+   FORM VALIDATION (shared with the contact form)
+   Uses the same #ef4444 danger colour the admin panel uses,
+   and the same 10px radius / 1px border as the fields above,
+   so an invalid field only changes colour — never its size.
+   ========================================================= */
+
+/* ---- +91 prefix sitting inside the existing phone field ---- */
+.phone-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.phone-input-wrap input {
+  width: 100%;
+  padding-left: 52px;
+}
+
+.phone-input-prefix {
+  position: absolute;
+  left: 14px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #5b6b82;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Hairline between the prefix and what the user types */
+.phone-input-prefix::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 18px;
+  background: #dbe6f2;
+}
+
+/* ---- invalid state ---- */
+.quote-field input.is-invalid,
+.quote-field select.is-invalid,
+.quote-field textarea.is-invalid,
+.contact-field input.is-invalid,
+.contact-field textarea.is-invalid {
+  border-color: #ef4444;
+}
+
+.quote-field input.is-invalid:focus,
+.quote-field select.is-invalid:focus,
+.quote-field textarea.is-invalid:focus,
+.contact-field input.is-invalid:focus,
+.contact-field textarea.is-invalid:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.field-error {
+  margin-top: 6px;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: #ef4444;
+}

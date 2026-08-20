@@ -6,6 +6,7 @@
    ========================================================= */
 
 import { revealOnScroll } from './scrollReveal.js';
+import { attachValidation, formatPhone } from './formValidation.js';
 
 export default class QuoteSection {
   constructor({ formSelector, categorySelector, categories = [], whatsappNumber }) {
@@ -28,11 +29,20 @@ export default class QuoteSection {
     const form = document.querySelector(formSelector);
     if (!form) return;
 
+    /* The form carries `novalidate`, so nothing stopped an empty
+       submission from opening WhatsApp before this. */
+    const validate = attachValidation(form, {
+      '#qName': { required: true, type: 'name', requiredMsg: 'Please enter your name.' },
+      '#qPhone': { required: true, type: 'phone', requiredMsg: 'Please enter your mobile number.' },
+      '#qEmail': { type: 'email' },
+    });
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      if (!validate()) return;
 
       const name = form.querySelector('#qName')?.value.trim();
-      const phone = form.querySelector('#qPhone')?.value.trim();
+      const phone = formatPhone(form.querySelector('#qPhone')?.value);
       const email = form.querySelector('#qEmail')?.value.trim();
       const category = form.querySelector('#qCategory')?.value;
       const city = form.querySelector('#qCity')?.value.trim();
