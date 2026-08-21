@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/avif" href="assets/images/logo.avif" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel — Clean Water System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/admin.css?v=4" />
+</head>
+<body>
+  <div id="adminRoot"></div>
+  <script type="module">
+    import AdminPanel from './components/AdminPanel.js?v=7';
+    new AdminPanel({ root: '#adminRoot' });
+  </script>
+</body>
+</html>

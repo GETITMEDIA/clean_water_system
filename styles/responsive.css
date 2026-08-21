@@ -1,0 +1,321 @@
+/* =========================================================
+   CLEAN WATER SYSTEM — RESPONSIVE FIXES (mobile + tablet)
+
+   Loaded LAST on every page. Everything here is inside a
+   max-width media query, so the desktop rendering (>1024px)
+   is byte-for-byte identical to before this file existed.
+
+   Scope: overflow / fit / spacing only. No colours, fonts,
+   component styles, borders, shadows or layout structures
+   are redesigned — sizes are only scaled down proportionally
+   so the existing design fits the smaller viewport.
+   ========================================================= */
+
+
+/* =========================================================
+   1. TABLET + MOBILE (<= 1024px)
+   ========================================================= */
+@media (max-width: 1024px) {
+
+  /* ---- 1.1 Overflow guards -------------------------------
+     Grid and flex items default to `min-width: auto`, so they
+     refuse to shrink below their content's min-content width.
+     A single long word, an email address or a form control's
+     intrinsic width then pushes the whole column wider than
+     the viewport. Allowing these tracks to shrink is what
+     keeps the existing layout inside the screen. */
+  .quote-grid > *,
+  .quote-form-grid > *,
+  .contact-main > *,
+  .contact-form-grid > *,
+  .contact-info-list > *,
+  .contact-info-card > *,
+  .quote-perk > *,
+  .footer-main-inner > *,
+  .ap-mv-inner > *,
+  .ap-cta-inner > *,
+  .ap-feat-card > *,
+  .ws-hero-inner > *,
+  .alc-hero-inner > *,
+  .pd-hero-grid > * {
+    min-width: 0;
+  }
+
+  /* Long unbroken strings (email addresses, URLs, phone runs)
+     are the other source of an unshrinkable min-content width. */
+  .contact-info-card p,
+  .contact-info-card a,
+  .footer-contact-item,
+  .footer-contact-item a,
+  .quote-perk p,
+  .ts-text {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Form controls carry a browser-default intrinsic width
+     (~170px+) that ignores the container. Pin them to their
+     column so the card can never be pushed wider. */
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* Media can never exceed its column. */
+  img,
+  svg,
+  video,
+  iframe,
+  table {
+    max-width: 100%;
+  }
+
+  /* Side-by-side product photos: as flex items they inherit
+     `min-width: auto`, so they refuse to shrink past the image's
+     own intrinsic pixel width and the pair runs off the row. */
+  .ws-row-image-pair img,
+  .alc-row-image-pair img,
+  .pd-thumb-row img {
+    min-width: 0;
+  }
+
+  /* ---- 1.2 Navbar ---------------------------------------
+     The slide-in menu column is ~245px wide, but the dropdown
+     keeps its desktop `min-width: 270px` and pokes out of it. */
+  .nav-menu .dropdown-menu {
+    min-width: 0;
+  }
+
+  /* Keep the fixed header's own box inside the viewport. */
+  .navbar {
+    max-width: 100%;
+  }
+
+  /* `.navbar` is `justify-content: space-between`. Once the hamburger
+     takes over, every child of `.navbar-right` is hidden — but the
+     wrapper itself stays in flow as an empty, zero-width flex item.
+     space-between then distributes across THREE items, so it parks the
+     hamburger in the middle of the bar instead of at the right edge.
+     Taking the empty wrapper out of flow restores logo-left/burger-right. */
+  .navbar-right {
+    display: none;
+  }
+
+  /* The slide-in panel is a child of `.navbar` with `z-index: 999`, so it
+     paints inside the header's stacking context — above the logo and the
+     toggle, which have no z-index of their own. The result: opening the
+     menu buries the close (X) button and half the logo underneath the
+     panel, leaving the overlay as the only way back out.
+     Lifting the two in-flow children keeps the bar on top, as it looks
+     when the menu is closed. */
+  .navbar-logo,
+  .menu-toggle {
+    position: relative;
+    z-index: 1001;
+  }
+
+  .navbar-logo {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .navbar-logo-text {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+/* =========================================================
+   2. TABLET BAND (641px - 1024px)
+
+   The original stylesheets step straight from their 980/1080px
+   rules down to 640px, so the whole tablet band kept full
+   desktop section padding (90-150px top and bottom). Scaled
+   down proportionally here — same design, tablet-sized gaps.
+   ========================================================= */
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  /* about.html */
+  .ap-hero            { padding-top: 130px; padding-bottom: 70px; }
+  .ap-who,
+  .ap-values,
+  .ap-cta             { padding-top: 70px; padding-bottom: 70px; }
+  .ap-mv              { padding-top: 60px; padding-bottom: 60px; }
+  .ap-feat            { padding-top: 70px; padding-bottom: 76px; }
+
+  /* contact.html */
+  .contact-hero       { padding-top: 130px; padding-bottom: 50px; }
+  .contact-main       { padding-top: 64px; padding-bottom: 64px; }
+  .contact-locations  { padding-bottom: 64px; }
+  .contact-reasons    { padding-top: 56px; padding-bottom: 56px; }
+  .contact-cta        { padding-top: 64px; padding-bottom: 64px; }
+
+  /* services.html */
+  .services-grid-section,
+  .services-process   { padding-top: 64px; padding-bottom: 64px; }
+  .services-cta       { padding-top: 64px; padding-bottom: 64px; }
+
+  /* shared page header (services / products / gallery) */
+  .products-page-header { padding-top: 130px; padding-bottom: 40px; }
+
+  /* homepage */
+  .quote-section      { padding-top: 70px; padding-bottom: 70px; }
+  .testimonials-section { padding-bottom: 88px; }
+
+  /* product pages */
+  .ws-hero,
+  .alc-hero           { padding-top: 130px; padding-bottom: 60px; }
+}
+
+
+/* =========================================================
+   3. MOBILE (<= 640px)
+
+   Sections whose vertical padding was never reduced for small
+   screens — they still carried the 70-90px desktop rhythm on a
+   phone. Brought in line with the sections that already do
+   scale down (which use ~60px here).
+   ========================================================= */
+@media (max-width: 640px) {
+
+  .premium-products     { padding-top: 64px; padding-bottom: 56px; }
+  .testimonials-section { padding-bottom: 60px; }
+  .contact-locations    { padding-bottom: 56px; }
+  .contact-reasons      { padding-top: 52px; padding-bottom: 52px; }
+  .contact-cta          { padding-top: 56px; padding-bottom: 56px; }
+  .services-cta         { padding-top: 56px; padding-bottom: 56px; }
+  .ws-cta,
+  .alc-cta,
+  .iro-cta              { padding-top: 56px; padding-bottom: 56px; }
+
+  /* Footer: the desktop column rhythm leaves a large dead gap
+     under the last stacked column on a phone. */
+  .footer-main          { padding-top: 40px; padding-bottom: 34px; }
+  .footer-wave          { height: 90px; }
+
+  /* Horizontal gutters: 24px on each side of a 360px screen is
+     13% of the width. Match the 20px the already-responsive
+     sections use, so every section lines up on one gutter. */
+  .premium-products,
+  .product-category-section,
+  .contact-locations,
+  .contact-reasons,
+  .contact-cta,
+  .services-cta,
+  .footer-main,
+  .footer-bottom-inner,
+  .gallery-hero,
+  .gallery-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+/* =========================================================
+   3b. TESTIMONIALS CAROUSEL (<= 1024px)
+
+   `.ts-carousel-wrapper` is a flex row: [prev] [clip] [next].
+   The arrows plus their gaps take a fixed slice out of that row —
+   116px on a phone (32% of a 390px screen) and 144px on a tablet.
+   The card clip is left with 242px on a phone, so the review text
+   column is only 182px and reviews wrap to nine-plus lines, which
+   is what makes the card so tall and narrow. On a 768px tablet the
+   text column is 204px for the same reason.
+
+   The arrows are given their own row underneath instead, so the
+   card spans the full width. Nothing is hidden or restyled —
+   the same buttons, in the same design, just wrapped.
+
+   Text column after this change: 182 -> 298px @390,
+   204 -> 276px @768, 193 -> 241px @1024.
+   ========================================================= */
+@media (max-width: 1024px) {
+  .ts-carousel-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  /* Full-width card on the first row... */
+  .ts-track-clip {
+    order: -1;
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  /* ...the two arrows flow onto the second row, centred. */
+  .ts-btn {
+    flex: 0 0 auto;
+  }
+}
+
+
+/* =========================================================
+   4. SMALL PHONES (<= 600px) — navbar fit
+
+   At 360px the header needs 357px of content inside 340px of
+   available width, so the white navbar card is cut off and the
+   hamburger is pushed towards / past the edge. The 19px logo
+   wordmark is `white-space: nowrap`, so it cannot give way.
+
+   (style.css already intends this scale-down, but its rules
+   target .logo-title / .logo-subtitle, which no page uses —
+   the markup has .navbar-logo-img / .navbar-logo-text.)
+   ========================================================= */
+@media (max-width: 600px) {
+  .navbar-logo {
+    gap: 10px;
+  }
+  .navbar-logo-img {
+    width: 44px;
+    height: 44px;
+  }
+  .navbar-logo-text {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-logo {
+    gap: 8px;
+  }
+  .navbar-logo-img {
+    width: 38px;
+    height: 38px;
+  }
+  .navbar-logo-text {
+    font-size: 13.5px;
+    letter-spacing: 0.2px;
+  }
+}
+
+
+/* =========================================================
+   5. MOBILE VIEWPORT HEIGHT
+
+   Mobile browsers size 100vh to the viewport *without* the
+   retracting address bar, so a 100vh hero is taller than the
+   screen actually is on first paint. `svh` is the small-viewport
+   unit that accounts for it; the @supports guard keeps the
+   100vh fallback for browsers that lack it.
+   ========================================================= */
+@supports (height: 100svh) {
+  @media (max-width: 1024px) {
+    .hs-hero  { min-height: 100svh; }
+    .hs-inner { height: 100svh; }
+  }
+
+  @media (max-width: 900px) {
+    .hs-inner { height: auto; min-height: 100svh; }
+  }
+
+  @media (max-height: 700px) and (max-width: 900px) {
+    .hs-inner { height: 100svh; }
+  }
+}

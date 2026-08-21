@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/avif" href="assets/images/logo.avif" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Clean Water System</title>
+  <meta name="description" content="A look at Clean Water System's product range — domestic purifiers, commercial RO plants, softeners and more." />
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="styles/products-page.css?v=2" />
+  <link rel="stylesheet" href="styles/gallery.css" />
+  <link rel="stylesheet" href="styles/footer.css?v=4" />
+  <link rel="stylesheet" href="styles/responsive.css?v=1" />
+</head>
+<body>
+
+  <!-- ============ HEADER / NAVBAR ============ -->
+  <header class="navbar-wrapper" id="navbarWrapper">
+    <nav class="navbar" aria-label="Primary navigation">
+
+      <!-- Logo -->
+      <a href="index.html#home" class="navbar-logo" aria-label="Clean Water System - Home">
+        <img src="assets/images/logo.avif" alt="Clean Water System" class="navbar-logo-img" width="52" height="52" />
+        <span class="navbar-logo-text">CLEAN WATER SYSTEM</span>
+      </a>
+
+      <!-- Mobile hamburger toggle -->
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Center navigation menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="index.html#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item dropdown" id="productsDropdown">
+          <button class="nav-link dropdown-toggle" id="productsToggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="productsMenu">
+            Products
+            <svg class="dropdown-arrow" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="dropdown-menu" id="productsMenu" aria-label="Products submenu">
+            <li><a href="multibrand-water-purifiers.html">Multibrand Water Purifiers</a></li>
+            <li><a href="domestic-water-purifiers.html">Domestic Water Purifiers</a></li>
+            <li><a href="industrial-commercial-ro-plants.html">Industrial and Commercial RO Plants</a></li>
+            <li><a href="water-softener-plant.html">Water Softener Plant</a></li>
+            <li><a href="iron-removal-plant.html">Iron Removal Plant</a></li>
+            <li><a href="water-conditioner.html">Water Conditioner</a></li>
+            <li><a href="sand-filter.html">Sand Filter</a></li>
+            <li><a href="automatic-level-controller.html">Automatic Level Controller</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link active" aria-current="page">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </li>
+        <li class="nav-item nav-item-cta">
+          <a href="index.html#quote" class="nav-cta-link"><svg class="cta-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C12 2 5 11 5 15.5C5 19.6 8.4 23 12 23C15.6 23 19 19.6 19 15.5C19 11 12 2 12 2Z"></path></svg><span>Get a Quote</span></a>
+        </li>
+      </ul>
+
+      <!-- Right section: divider + call info + CTA -->
+      <div class="navbar-right">
+        <span class="divider" aria-hidden="true"></span>
+
+        <div class="call-section">
+          <span class="call-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"></path>
+            </svg>
+          </span>
+          <span class="call-text">
+            <span class="call-label">Call Us Now</span>
+            <span class="call-number"><a href="tel:+919600879192">96008 79192</a> / <a href="tel:+919043729192">90437 29192</a></span>
+          </span>
+        </div>
+
+        <a href="index.html#quote" class="cta-button">
+          <svg class="cta-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 2C12 2 5 11 5 15.5C5 19.6 8.4 23 12 23C15.6 23 19 19.6 19 15.5C19 11 12 2 12 2Z"></path>
+          </svg>
+          <span>Get a Quote</span>
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Overlay shown behind the mobile slide-in menu -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <main>
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="products-page-header">
+      <p class="section-label">Gallery</p>
+      <span class="label-underline" aria-hidden="true"></span>
+      <h1 class="page-title">A Closer Look at <span class="heading-blue">Our Products</span></h1>
+      <p class="section-subtitle">Browse our range of domestic, commercial and industrial water purification systems.</p>
+    </section>
+
+    <!-- ============ FILTER CHIPS ============ -->
+    <div class="gallery-filter-bar" id="galleryFilterBar" role="tablist" aria-label="Filter gallery by category">
+      <button class="gallery-chip is-active" data-filter="all" type="button">All</button>
+      <button class="gallery-chip" data-filter="domestic" type="button">Domestic</button>
+      <button class="gallery-chip" data-filter="multibrand" type="button">Multibrand</button>
+      <button class="gallery-chip" data-filter="commercial" type="button">Commercial</button>
+      <button class="gallery-chip" data-filter="industrial" type="button">Industrial</button>
+      <button class="gallery-chip" data-filter="softener" type="button">Softener</button>
+      <button class="gallery-chip" data-filter="installation" type="button">Installations</button>
+    </div>
+
+    <!-- ============ GRID ============ -->
+    <section class="gallery-grid-section">
+      <div class="gallery-grid" id="galleryGrid">
+
+        <div class="gallery-item" data-category="multibrand" data-caption="Aqua Neptune — RO + Minerals Purifier">
+          <img src="assets/products/1.avif" alt="Aqua Neptune water purifier" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Aqua Neptune</span>
+        </div>
+
+        <div class="gallery-item" data-category="multibrand" data-caption="Aqua Purosis — Wall-Mounted RO Purifier">
+          <img src="assets/products/2.avif" alt="Aqua Purosis water purifier" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Aqua Purosis</span>
+        </div>
+
+        <div class="gallery-item" data-category="domestic" data-caption="Prolife Water Purifier — Smart Digital Display">
+          <img src="assets/products/3.avif" alt="Prolife water purifier" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Prolife Water Purifier</span>
+        </div>
+
+        <div class="gallery-item" data-category="domestic" data-caption="Aqua Oyster — Under-Counter Purifier">
+          <img src="assets/products/4.avif" alt="Aqua Oyster water purifier" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Aqua Oyster</span>
+        </div>
+
+        <div class="gallery-item" data-category="domestic" data-caption="Pure E Safe — Wall-Mounted RO + UV Purifier">
+          <img src="assets/frames/png1.png" alt="Pure E Safe wall-mounted RO purifier" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Pure E Safe RO Purifier</span>
+        </div>
+
+        <div class="gallery-item" data-category="commercial" data-caption="Commercial RO Plant with Softener Tanks">
+          <img src="assets/frames/png2.png" alt="Commercial RO water treatment plant" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Commercial RO Plant</span>
+        </div>
+
+        <div class="gallery-item" data-category="softener" data-caption="Twin-Tank Water Softener System">
+          <img src="assets/frames/png3.png" alt="Water softener system" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Water Softener System</span>
+        </div>
+
+        <div class="gallery-item" data-category="domestic" data-caption="UV + UF Wall-Mounted Purifier with Faucet">
+          <img src="assets/frames/png4.png" alt="UV and UF water purifier with faucet" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">UV + UF Purifier</span>
+        </div>
+
+        <div class="gallery-item" data-category="industrial" data-caption="Industrial Water Treatment Unit">
+          <img src="assets/frames/png5.png" alt="Industrial water treatment unit" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Industrial Treatment Unit</span>
+        </div>
+
+        <div class="gallery-item" data-category="domestic" data-caption="Prolife+ — Copper &amp; Zinc Enriched RO Purifier">
+          <img src="assets/images/1.png" alt="Prolife+ copper technology water purifier" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Prolife+ Copper Technology</span>
+        </div>
+
+        <div class="gallery-item" data-category="domestic" data-caption="Compact RO + UV Countertop Purifier">
+          <img src="assets/images/2.png" alt="Compact RO and UV water purifier" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Compact RO + UV Purifier</span>
+        </div>
+
+        <div class="gallery-item" data-category="industrial" data-caption="Advanced RO + UF Filtration Rig">
+          <img src="assets/images/3.png" alt="Advanced RO and UF filtration system" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Advanced RO + UF Filtration</span>
+        </div>
+
+        <div class="gallery-item" data-category="multibrand" data-caption="Aqua Neptune — Retail Packaging">
+          <img src="assets/images/7b178d12-0156-4678-a02b-3ef06ff660cd.png" alt="Aqua Neptune retail packaging" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Aqua Neptune Packaging</span>
+        </div>
+
+        <div class="gallery-item" data-category="multibrand" data-caption="Aqua Neptune — Color Variant">
+          <img src="assets/images/product1/1.avif" alt="Aqua Neptune color variant" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Aqua Neptune — Variant</span>
+        </div>
+
+        <div class="gallery-item" data-category="multibrand" data-caption="Aqua Neptune — Color Variant">
+          <img src="assets/images/product1/2.avif" alt="Aqua Neptune color variant" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Aqua Neptune — Variant</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Commercial Shed Installation — Twin-Tank System">
+          <img src="assets/products/Gallery/1.avif" alt="Twin-tank water treatment system installed in a commercial shed" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Commercial Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Indoor Water Softener Installation">
+          <img src="assets/products/Gallery/2.avif" alt="Water softener system installed indoors" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Indoor Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Big Blue Filter — Wall-Mounted Installation">
+          <img src="assets/products/Gallery/3.avif" alt="Big Blue filter housing mounted on an outdoor wall" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Big Blue Filter Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Twin-Tank System — Terrace Installation">
+          <img src="assets/products/Gallery/4.avif" alt="Twin-tank water treatment system installed on a terrace" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Terrace Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="On-Site Water Treatment Installation">
+          <img src="assets/products/Gallery/5.avif" alt="Technician at an on-site water treatment installation" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">On-Site Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Twin-Tank Softener with Connected Tubing">
+          <img src="assets/products/Gallery/6.avif" alt="Twin-tank softener system with connected tubing" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Softener Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Site Installation in Progress">
+          <img src="assets/products/Gallery/7.avif" alt="Water treatment system installation in progress at a construction site" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Installation in Progress</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Twin-Tank System with Safety Labels">
+          <img src="assets/products/Gallery/8.avif" alt="Twin-tank water treatment system with safety labels" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Twin-Tank Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Customer Site Installation">
+          <img src="assets/products/Gallery/9.avif" alt="Water treatment system installed at a customer site" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Customer Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Range of Water Treatment Tanks">
+          <img src="assets/products/Gallery/10.avif" alt="A range of water treatment tanks of different sizes" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Tank Range</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Showroom Display — Water Treatment Systems">
+          <img src="assets/products/Gallery/11.avif" alt="Water treatment systems on display in a showroom" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Showroom Display</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Indoor Plumbing Installation">
+          <img src="assets/products/Gallery/12.avif" alt="Twin-tank system with indoor plumbing installation" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Plumbing Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="On-Site Customer Installation">
+          <img src="assets/products/Gallery/13.avif" alt="Water treatment system installed on-site with customer" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Customer Site Visit</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Outdoor Installation Near Landscaping">
+          <img src="assets/products/Gallery/14.avif" alt="Twin-tank system installed outdoors near landscaping" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Outdoor Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Technician Adjusting Control Valve">
+          <img src="assets/products/Gallery/15.avif" alt="Technician adjusting the control valve on a water treatment tank" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Valve Setup</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Clean Water System Branded Softener">
+          <img src="assets/products/Gallery/16.avif" alt="Clean Water System branded softener tanks installed outdoors" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Branded Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Wall-Mounted Twin-Tank Installation">
+          <img src="assets/products/Gallery/17.avif" alt="Twin-tank system mounted on a wall" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Wall-Mounted Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Wall-Mounted System with Valve Assembly">
+          <img src="assets/products/Gallery/18.avif" alt="Wall-mounted water treatment system with valve assembly" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Valve Assembly</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Installation Inspection">
+          <img src="assets/products/Gallery/19.avif" alt="Technicians inspecting a completed installation" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Installation Inspection</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Technician Fine-Tuning Valve">
+          <img src="assets/products/Gallery/20.avif" alt="Technician fine-tuning a control valve" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Fine-Tuning Setup</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Satisfied Customer Installation">
+          <img src="assets/products/Gallery/21.avif" alt="Technician with a completed installation" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Completed Installation</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Twin-Tank Installation in Progress">
+          <img src="assets/products/Gallery/22.avif" alt="Twin-tank water treatment installation in progress" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Installation in Progress</span>
+        </div>
+
+        <div class="gallery-item" data-category="installation" data-caption="Team Installation — Clean Water System">
+          <img src="assets/products/Gallery/23.avif" alt="Clean Water System team at a completed installation" loading="lazy">
+          <span class="gallery-item-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          <span class="gallery-item-caption">Team Installation</span>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="gallery-lightbox" id="galleryLightbox">
+    <button class="gallery-lightbox-arrow gallery-lightbox-prev" id="galleryLightboxPrev" type="button" aria-label="Previous image">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="gallery-lightbox-inner">
+      <button class="gallery-lightbox-close" id="galleryLightboxClose" type="button" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <img class="gallery-lightbox-img" id="galleryLightboxImg" src="" alt="">
+      <p class="gallery-lightbox-caption" id="galleryLightboxCaption"></p>
+    </div>
+    <button class="gallery-lightbox-arrow gallery-lightbox-next" id="galleryLightboxNext" type="button" aria-label="Next image">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <footer id="siteFooter"></footer>
+  <script src="script.js"></script>
+  <script type="module">
+    import GalleryPage from './components/GalleryPage.js';
+    import Footer from './components/Footer.js?v=5';
+
+    new GalleryPage({
+      grid: '#galleryGrid',
+      filterBar: '#galleryFilterBar',
+      lightbox: '#galleryLightbox',
+    });
+    new Footer({ root: '#siteFooter' });
+  </script>
+</body>
+</html>

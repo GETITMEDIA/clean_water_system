@@ -1,0 +1,461 @@
+/* =========================================================
+   HERO SLIDER — premium 5-slide carousel with shared background,
+   staggered text reveal, and a replayed water-splash burst.
+   Relies on the CSS variables defined in style.css (:root)
+   ========================================================= */
+
+.hs-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--dark-navy);
+  isolation: isolate;
+  outline: none;
+}
+
+/* ---------- Shared background (Ken-Burns slow zoom) ---------- */
+.hs-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 1.4s ease;
+  animation: hs-bg-zoom 24s ease-in-out infinite alternate;
+}
+
+.hs-hero.hs-mounted .hs-bg {
+  opacity: 1;
+}
+
+.hs-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(5, 17, 40, 0.93) 0%, rgba(5, 17, 40, 0.74) 30%, rgba(5, 17, 40, 0.30) 56%, rgba(5, 17, 40, 0.5) 100%),
+    linear-gradient(0deg, rgba(5, 17, 40, 0.6) 0%, rgba(5, 17, 40, 0) 42%);
+}
+
+/* ---------- Layout shell ---------- */
+.hs-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100vh;
+  min-height: 660px;
+  padding: calc(var(--navbar-height) + 46px) 24px 110px;
+  display: flex;
+  align-items: center;
+}
+
+.hs-slides {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+
+.hs-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s ease;
+}
+
+.hs-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- Left: text column ---------- */
+.hs-slide-text {
+  max-width: 540px;
+  flex-shrink: 0;
+}
+
+.hs-slide-text > * {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hs-slide.is-active .hs-tag       { opacity: 1; transform: translateY(0); transition-delay: 0.12s; }
+.hs-slide.is-active .hs-heading   { opacity: 1; transform: translateY(0); transition-delay: 0.24s; }
+.hs-slide.is-active .hs-desc      { opacity: 1; transform: translateY(0); transition-delay: 0.38s; }
+.hs-slide.is-active .hs-cta-row   { opacity: 1; transform: translateY(0); transition-delay: 0.52s; }
+
+.hs-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px 9px 14px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #bfe0ff;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hs-heading {
+  margin-top: 22px;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.08;
+  color: var(--white);
+  letter-spacing: -0.5px;
+}
+
+.hs-heading-line {
+  display: block;
+}
+
+.hs-heading-accent {
+  background: linear-gradient(90deg, #8fd3ff, #5bb8ff 55%, #dff2ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hs-desc {
+  margin-top: 20px;
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 460px;
+}
+
+.hs-cta-row {
+  margin-top: 34px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 15px 28px;
+  border-radius: 32px;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.hs-btn-primary {
+  background: linear-gradient(135deg, #2f7dff, var(--primary-blue));
+  color: var(--white);
+  box-shadow: 0 14px 30px rgba(13, 94, 244, 0.4);
+}
+
+.hs-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(13, 94, 244, 0.55);
+}
+
+.hs-btn-ghost {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hs-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+}
+
+/* ---------- Right: product visual + water splash ---------- */
+.hs-slide-visual {
+  position: relative;
+  flex: 0 0 46%;
+  max-width: 560px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hs-product-img {
+  position: relative;
+  z-index: 2;
+  max-width: 92%;
+  max-height: 76%;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 45px rgba(3, 15, 35, 0.55));
+  opacity: 0;
+  transform: scale(0.86) translateY(26px);
+  transition: opacity 0.8s ease, transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.hs-slide.is-active .hs-product-img {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition-delay: 0.16s;
+}
+
+.hs-splash {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hs-glow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background: radial-gradient(circle, rgba(91, 184, 255, 0.55), rgba(13, 94, 244, 0) 70%);
+  filter: blur(30px);
+  animation: hs-glow-pulse 4.5s ease-in-out infinite;
+}
+
+.hs-ring {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  border-radius: 50%;
+  border: 2px solid rgba(191, 224, 255, 0.55);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.4);
+}
+
+.hs-ring-a { width: 230px; height: 230px; }
+.hs-ring-b { width: 330px; height: 330px; }
+
+.hs-splash.is-bursting .hs-ring-a { animation: hs-ring-burst 1s ease-out; }
+.hs-splash.is-bursting .hs-ring-b { animation: hs-ring-burst 1.15s ease-out 0.1s; }
+
+.hs-wave {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: 10%;
+  width: 92%;
+  height: auto;
+  opacity: 0.85;
+  animation: hs-wave-bob 5s ease-in-out infinite;
+}
+
+.hs-droplet {
+  position: absolute;
+  left: calc(50% + (var(--d) - 3) * 30px);
+  bottom: 20%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffffff, #bfe4ff 55%, rgba(13, 94, 244, 0.25) 100%);
+  opacity: 0;
+}
+
+.hs-splash.is-bursting .hs-droplet {
+  animation: hs-droplet-pop 1.15s ease-out forwards;
+  animation-delay: calc(var(--d) * 80ms);
+}
+
+/* ---------- Controls: arrows + dots ---------- */
+.hs-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.hs-arrow {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.hs-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.55);
+  transform: translateY(-2px);
+}
+
+.hs-dots {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.hs-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: width 0.35s ease, background 0.35s ease;
+}
+
+.hs-dot.is-active {
+  width: 30px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #5bb8ff, var(--primary-blue));
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes hs-bg-zoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+
+@keyframes hs-glow-pulse {
+  0%, 100% { opacity: 0.35; transform: translate(-50%, -50%) scale(1); }
+  50%      { opacity: 0.6;  transform: translate(-50%, -50%) scale(1.14); }
+}
+
+@keyframes hs-wave-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-9px); }
+}
+
+@keyframes hs-ring-burst {
+  0%   { opacity: 0.7; transform: translate(-50%, -50%) scale(0.4); }
+  70%  { opacity: 0.22; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.55); }
+}
+
+@keyframes hs-droplet-pop {
+  0%   { opacity: 0; transform: translate(-50%, 40px) scale(0.3); }
+  28%  { opacity: 1; }
+  75%  { opacity: 0.9; }
+  100% { opacity: 0; transform: translate(-50%, -95px) scale(0.85); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1180px) {
+  .hs-heading { font-size: 44px; }
+  .hs-slide-visual { flex: 0 0 42%; }
+}
+
+@media (max-width: 900px) {
+  .hs-inner {
+    padding: calc(var(--navbar-height) + 30px) 20px 130px;
+    height: auto;
+    min-height: 100vh;
+  }
+  .hs-slide {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 18px;
+  }
+  .hs-slide-text {
+    max-width: 100%;
+  }
+  .hs-desc { margin-left: auto; margin-right: auto; }
+  .hs-cta-row { justify-content: center; }
+  .hs-slide-visual {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 360px;
+    height: 280px;
+  }
+  .hs-heading { font-size: 36px; }
+}
+
+@media (max-width: 480px) {
+  .hs-inner { padding: calc(var(--navbar-height) + 20px) 16px 90px; }
+  .hs-heading { font-size: 29px; }
+  .hs-desc { font-size: 15px; }
+  .hs-btn { padding: 13px 22px; font-size: 14px; }
+  .hs-slide-visual { height: 220px; }
+  .hs-controls { bottom: 22px; gap: 16px; }
+  .hs-arrow { width: 40px; height: 40px; }
+}
+
+/* Very short viewports (small phones in DevTools presets, some landscape
+   phones) — the fixed padding above leaves almost no room for content when
+   height is this constrained, so trim it further. Scoped to mobile widths
+   only via max-width so desktop/tablet browser windows are never affected.
+
+   .hs-inner uses height:auto at the 900px breakpoint above; percentage
+   heights (.hs-slides { height: 100% }) don't resolve against an `auto`
+   ancestor per spec, so .hs-slides silently collapsed to 0px here and the
+   text only ever appeared because of overflow:visible painting outside
+   that collapsed box — centering it then overflowed equally in both
+   directions, pushing the heading up behind the navbar. Giving .hs-inner
+   an explicit height fixes the percentage chain properly. */
+@media (max-height: 700px) and (max-width: 900px) {
+  .hs-inner {
+    height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 20px;
+  }
+  .hs-slides {
+    max-height: 100%;
+  }
+  .hs-slide {
+    overflow-y: auto;
+    gap: 8px;
+    padding-bottom: 54px; /* reserve room for the absolutely-positioned dot/arrow controls */
+  }
+  .hs-slide-visual {
+    display: none;
+  }
+  .hs-tag {
+    padding: 6px 12px 6px 10px;
+    font-size: 10.5px;
+  }
+  .hs-heading {
+    margin-top: 10px;
+    font-size: 22px;
+  }
+  .hs-desc {
+    margin-top: 8px;
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  .hs-cta-row {
+    margin-top: 12px;
+  }
+  .hs-controls {
+    bottom: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hs-bg { animation: none; }
+  .hs-glow { animation: none; }
+  .hs-wave { animation: none; }
+  .hs-ring, .hs-droplet { animation: none !important; }
+  .hs-slide, .hs-slide-text > *, .hs-product-img { transition-duration: 0.01s; }
+}

@@ -1,0 +1,1433 @@
+[
+    {
+        "id": "aqua-neptune",
+        "name": "Aqua Neptune",
+        "image": "assets/products/1.avif",
+        "colorImages": [
+            "assets/images/product1/1.avif",
+            "assets/images/product1/2.avif",
+            "assets/uploads/img_6a4b4962cc9d81.19131436.avif"
+        ],
+        "category": "multibrand-water-purifiers",
+        "descriptionList": [
+            "Production capacity - 15 LPH",
+            "Tank capacity - 10 L",
+            "Food grade, non-breakable build",
+            "ABS plastic construction",
+            "10 liters storage",
+            "LED indicator",
+            "Auto on/off"
+        ],
+        "variants": [
+            {
+                "name": "RO + Minerals",
+                "price": 8999
+            },
+            {
+                "name": "RO + Minerals + Alkaline",
+                "price": 9999
+            },
+            {
+                "name": "RO + Minerals + Copper",
+                "price": 9999
+            },
+            {
+                "name": "RO + Minerals + Copper",
+                "price": 10000
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ab83dc7d03.83080273.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ac85c6d546.40861321.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ae2e254e49.53007200.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ac901b4799.18351931.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ac24f15893.09224841.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ba8d2bfdd3.79522913.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ba95c9dfb6.93773934.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ba9b48fb71.76874190.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ace77475a8.04512661.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54baa6776f11.11638631.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54baaa6f51c7.48842011.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54baaeca59b7.23126430.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54add76e4b50.64618721.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54babb9518a9.30587128.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54bac017f0a4.42109578.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54bac83f90b5.20590579.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-purosis",
+        "name": "Aqua Purosis",
+        "image": "assets/products/2.avif",
+        "colorImages": [
+            "assets/uploads/img_6a474e9d99c100.34783554.avif",
+            "assets/uploads/img_6a474ea36373e4.71539200.avif",
+            "assets/uploads/img_6a474eaa086e33.58063480.avif"
+        ],
+        "category": "multibrand-water-purifiers",
+        "descriptionList": [
+            "Production capacity - 18 LPH"
+        ],
+        "variants": [
+            {
+                "name": "RO + Minerals",
+                "price": 12499
+            },
+            {
+                "name": "RO + Minerals + Alkaline",
+                "price": 13499
+            },
+            {
+                "name": "RO + Minerals + Copper",
+                "price": 13499
+            }
+        ],
+        "includedItems": "Wall Bracket, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "Silver",
+                "image": "assets/uploads/img_6a54c4406d5be5.20148862.avif"
+            },
+            {
+                "name": "Black",
+                "image": "assets/uploads/img_6a54c448013ca6.00935098.avif"
+            }
+        ]
+    },
+    {
+        "id": "prolife-water-purifier-1",
+        "name": "Prolife Water Purifier",
+        "image": "assets/uploads/img_6a5487a852a3a3.81021611.avif",
+        "colorImages": [],
+        "category": "multibrand-water-purifiers",
+        "descriptionList": [
+            "RO + UV + UF + TDS + Alkaline + Copper"
+        ],
+        "variants": [
+            {
+                "name": "Standard",
+                "price": 17999
+            },
+            {
+                "name": "Prolife Viber - Black",
+                "price": 15000
+            },
+            {
+                "name": "Prolife Fiesta - Blue",
+                "price": 15999
+            },
+            {
+                "name": "Prolife Fiesta - White",
+                "price": 15999
+            },
+            {
+                "name": "Prolife Fiesta - Violet",
+                "price": 15999
+            },
+            {
+                "name": "Prolife Fiesta - Black",
+                "price": 15999
+            }
+        ],
+        "includedItems": "Wall Bracket, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54c4d1c26b46.01635792.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54c564e3b6f2.48639652.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54c5d266b760.91226289.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54c624d4cf44.52869583.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54c64d0c13b0.89748815.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54c675dd2c70.49303020.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-oyster-blue",
+        "name": "Aqua Oyster - Blue",
+        "image": "assets/uploads/img_6a548877124044.18050632.avif",
+        "colorImages": [],
+        "category": "multibrand-water-purifiers",
+        "descriptionList": [
+            "RO + Minerals",
+            "RO + UV + UF + TDS + Minerals",
+            "RO + Alkaline",
+            "RO + Copper"
+        ],
+        "variants": [
+            {
+                "name": "Aqua Oyster - Blue",
+                "price": 10000
+            },
+            {
+                "name": "Aqua Oyster - Comrade Blue",
+                "price": 10000
+            },
+            {
+                "name": "Aqua Oyster - Black",
+                "price": 10000
+            },
+            {
+                "name": "Aqua Oyster - Grey",
+                "price": 10000
+            },
+            {
+                "name": "Aqua Oyster - Aqua Green",
+                "price": 10000
+            }
+        ],
+        "includedItems": "Wall Bracket, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54c6bb8ff087.62691733.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54c6c6a86ff3.72392215.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54c6cdbec089.92613408.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54c6d76a8a11.46626084.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cb42e31913.58899777.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-rolex",
+        "name": "Aqua Rolex",
+        "image": "assets/uploads/img_6a54893c08d6b9.87367369.avif",
+        "colorImages": [],
+        "category": "multibrand-water-purifiers",
+        "descriptionList": [
+            "Models:1. Ro+Minerals2. Ro+Alkaline3. Ro+Copper"
+        ],
+        "variants": [
+            {
+                "name": "Aqua Rolex - Green",
+                "price": 10000
+            },
+            {
+                "name": "Aqua Rolex - Black",
+                "price": 10000
+            },
+            {
+                "name": "Aqua Rolex - Grey",
+                "price": 10000
+            },
+            {
+                "name": "Aqua Rolex - Blue",
+                "price": 10000
+            }
+        ],
+        "includedItems": "1 year Free Service  1 year Unit Warranty  2 year Pump Warranty  (Free Stand, Cover, Pre Filter)",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cb7d244980.09194231.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cb85077414.34773192.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cb92169cf5.50653546.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cb9b6de831.02572403.avif"
+            }
+        ]
+    },
+    {
+        "id": "lexzon",
+        "name": "Lexzon",
+        "image": "assets/uploads/img_6a5489a7310497.52550639.avif",
+        "colorImages": [],
+        "category": "multibrand-water-purifiers",
+        "descriptionList": [
+            "5 attractive colour options",
+            "For wall mounting or countertop installation",
+            "Production capacity - 15 LPH",
+            "Tank capacity - 10 L",
+            "Food grade, non-breakable ABS plastic construction",
+            "Detachable tank",
+            "10 liters storage",
+            "LED indicator",
+            "Auto on/off"
+        ],
+        "variants": [
+            {
+                "name": "Lexzon-Metallic Grey",
+                "price": 9999
+            },
+            {
+                "name": "Lexzon-Aqua Green",
+                "price": 9999
+            },
+            {
+                "name": "Lexzon - Metallic Blue",
+                "price": 9999
+            },
+            {
+                "name": "Lexzon - Aqua Blue",
+                "price": 9999
+            },
+            {
+                "name": "Lexzon - Metallic Cherry Red",
+                "price": 9999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ccd03bc6b2.76254223.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cdd99b4d17.71629099.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cde0a96838.98756896.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cde5d05f89.36288480.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cded0ebcf0.01370057.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ccdb33fc99.91379296.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ce191e6816.88041554.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ce1fe89ce6.01134138.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ce2c376aa5.35164362.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ce3b1aba16.24796294.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cce734e9e7.05298915.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ced38fc4e6.74946897.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ced9019fe6.23575626.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cee291cdd6.26393350.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cef92f4101.80739121.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54ccfcdf1514.87316266.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cf04583844.76453909.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cf0a1129a4.98408793.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cf13f0ada5.54317896.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cd0e89e851.80988401.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cf219e81d3.30683267.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cf271025e3.13160216.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54cf2f032792.63948389.avif"
+            }
+        ]
+    },
+    {
+        "id": "clean-water",
+        "name": "Clean Water",
+        "image": "assets/uploads/img_6a548a10dc3859.91114985.avif",
+        "colorImages": [],
+        "category": "multibrand-water-purifiers",
+        "descriptionList": [
+            "RO + Minerals",
+            "RO + Minerals + Copper",
+            "RO + Minerals + Alkaline"
+        ],
+        "variants": [
+            {
+                "name": "Clean Water",
+                "price": 8500
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54d032d86f28.69843452.avif"
+            }
+        ]
+    },
+    {
+        "id": "dolphin",
+        "name": "G+ Series",
+        "image": "assets/uploads/img_6a54d224eb8c57.09500510.avif",
+        "colorImages": [],
+        "category": "multibrand-water-purifiers",
+        "descriptionList": [
+            "RO + Minerals",
+            "RO + Copper",
+            "RO + Minerals + Alkaline",
+            "Ro+UV+UF+Alkaline+Copper+TDS"
+        ],
+        "variants": [
+            {
+                "name": "G+ Series - Black",
+                "price": 14000
+            },
+            {
+                "name": "G+ Series - White",
+                "price": 14000
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54d0870bb736.03976322.avif"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54d092dcc3c6.39871451.avif"
+            }
+        ]
+    },
+    {
+        "id": "g-series",
+        "name": "Dolphin",
+        "image": "assets/uploads/img_6a54d145305174.93126822.avif",
+        "colorImages": [],
+        "category": "multibrand-water-purifiers",
+        "descriptionList": [
+            "RO + UV + UF + Alkaline + Copper + TDS",
+            "Original price Rs.21,000 - now Rs.14,000",
+            "Models: 1. Ro+minerals2. Ro+Copper3. Ro+minerals+Alkaline"
+        ],
+        "variants": [
+            {
+                "name": "Dolphin",
+                "price": 7500
+            }
+        ],
+        "includedItems": "Wall Bracket, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54d1399a2d68.66911107.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-queen",
+        "name": "Aqua Queen",
+        "image": "assets/uploads/img_6a54dca38032b3.38231118.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Production capacity - 15 LPH",
+            "Tank capacity - 10 L",
+            "Food grade, non-breakable ABS plastic construction",
+            "10 liters storage",
+            "LED indicator",
+            "Auto on/off"
+        ],
+        "variants": [
+            {
+                "name": "Aqua Queen",
+                "price": 8500
+            },
+            {
+                "name": "RO + Minerals + Alkaline",
+                "price": 9500
+            },
+            {
+                "name": "RO + Minerals + Copper",
+                "price": 9500
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54dcdcc9b492.37832241.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "aqua-2090-mirror-black-601",
+        "name": "Aqua 2090-Mirror Black-601",
+        "image": "assets/uploads/img_6a548e97909441.38117104.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "For wall mounting or countertop installation",
+            "Production capacity - 15 LPH",
+            "Tank capacity - 9 L",
+            "Food grade, non-breakable ABS plastic construction",
+            "Detachable tank",
+            "9 liters storage",
+            "LED indicator",
+            "Auto on/off"
+        ],
+        "variants": [
+            {
+                "name": "RO + Minerals",
+                "price": 10999
+            },
+            {
+                "name": "RO + Minerals + Alkaline",
+                "price": 11999
+            },
+            {
+                "name": "RO + Minerals + Copper",
+                "price": 11999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": []
+    },
+    {
+        "id": "aqua-2090-premun-grey-602",
+        "name": "Aqua 2090-Premun Grey-602",
+        "image": "assets/uploads/img_6a54dd10ee64e5.32654932.webp",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals                                                                                          ₹.10,999.00 Ro + minerals + *alkalin                                                                       ₹.11,999.00 Ro + minerals. + copper                                                                      ₹.11,999.00",
+            "Description*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off"
+        ],
+        "variants": [
+            {
+                "name": "Aqua 2090-Premun Grey-602",
+                "price": 10999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54dd4511abe6.40221832.webp"
+            }
+        ]
+    },
+    {
+        "id": "aqua-2090-aqua-green-202",
+        "name": "Aqua 2090-Aqua Green-202",
+        "image": "assets/uploads/img_6a54de16a29b11.71776013.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off"
+        ],
+        "variants": [
+            {
+                "name": "Aqua 2090-Aqua Green-202",
+                "price": 0
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54de1c060716.38971891.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "aqua-2090-black-203",
+        "name": "Aqua 2090-Black-203",
+        "image": "assets/uploads/img_6a54deb00ed0c5.19502008.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off",
+            "Models: Ro + minerals                                                                                          ₹.10,999.00 Ro + minerals + *alkalin                                                                       ₹.11,999.00 Ro + minerals. + copper                                                                      ₹.11,999.00"
+        ],
+        "variants": [
+            {
+                "name": "Aqua 2090-Black-203",
+                "price": 10999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54deb51310c1.27428749.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "aqua-2090-blue-201",
+        "name": "Aqua 2090-Blue-201",
+        "image": "assets/uploads/img_6a54df323cbfc9.99518716.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals                                                                                         ₹.10,999.00 Ro + minerals + *alkalin                                                                     ₹11,999.00 Ro + minerals. + copper                                                                    ₹.11,999.00",
+            "For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off"
+        ],
+        "variants": [
+            {
+                "name": "Aqua 2090-Blue-201",
+                "price": 10999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54df363a8f29.78984451.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "aqua-2090-deep-purple-603",
+        "name": "Aqua 2090-Deep Purple-603",
+        "image": "assets/uploads/img_6a54df98b6f409.68561728.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals                                                                                         ₹.10,999.00 Ro + minerals + *alkalin                                                                     ₹11,999.00 Ro + minerals. + copper                                                                    ₹.11,999.00  Description*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off"
+        ],
+        "variants": [
+            {
+                "name": "Aqua 2090-Deep Purple-603",
+                "price": 10999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54df9d332ca4.55101181.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "finpure-metallic-black",
+        "name": "Finpure-Metallic Black",
+        "image": "assets/uploads/img_6a54dfed925676.59698391.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals+uv                                                                                             ₹.12,999.00 Ro + minerals + *alkalin + uv                                                                       ₹.13,999.00 Ro + minerals. + copper+ uv uf                                                                  ₹.10,999.00  Description*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off"
+        ],
+        "variants": [
+            {
+                "name": "Finpure-Metallic Black",
+                "price": 12999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54dff3738240.47911364.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "finpure-metallic-grey",
+        "name": "Finpure-Metallic Grey",
+        "image": "assets/uploads/img_6a54e113cd2e35.26068147.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals+uv                                                                                             ₹.12,999.00 Ro + minerals + *alkalin + uv                                                                       ₹.13,999.00 Ro + minerals. + copper+ uv uf                                                                  ₹.10,999.00  Description*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off"
+        ],
+        "variants": [
+            {
+                "name": "Finpure-Metallic Grey",
+                "price": 12999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54e11bab9d73.19223365.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "finpure-premium-silver",
+        "name": "Finpure-Premium Silver",
+        "image": "assets/uploads/img_6a55c1b1cbef78.52933624.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals+uv                                                                                             ₹.12,999.00 Ro + minerals + *alkalin + uv                                                                       ₹.13,999.00 Ro + minerals. + copper+ uv uf                                                                  ₹.10,999.00  Description*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off"
+        ],
+        "variants": [
+            {
+                "name": "Finpure-Premium Silver",
+                "price": 12999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c1b89a3327.13687166.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "finpure-puro-pink",
+        "name": "Finpure-Puro Pink",
+        "image": "assets/uploads/img_6a54e208992e67.45382426.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals+uv                                                                                             ₹.12,999.00 Ro + minerals + *alkalin + uv                                                                       ₹.13,999.00 Ro + minerals. + copper+ uv uf                                                                  ₹.10,999.00  Description*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off"
+        ],
+        "variants": [
+            {
+                "name": "Finpure-Puro Pink",
+                "price": 12999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a54e20db8ea42.93648685.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "finpure-copper-gold",
+        "name": "Finpure-Copper Gold",
+        "image": "assets/uploads/img_6a55c1fec176a4.15281855.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals+uv                                                                                             ₹.12,999.00 Ro + minerals + *alkalin + uv                                                                       ₹.13,999.00 Ro + minerals. + copper+ uv uf                                                                  ₹.10,999.00  Description*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off"
+        ],
+        "variants": [
+            {
+                "name": "Finpure-Copper Gold",
+                "price": 12999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c202e14501.64297274.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "finpure-metallic-white",
+        "name": "Finpure-Metallic White",
+        "image": "assets/uploads/img_6a55c26c7deb97.70769927.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals+uv                                                                                             ₹.12,999.00 Ro + minerals + *alkalin + uv                                                                       ₹.13,999.00 Ro + minerals. + copper+ uv uf                                                                  ₹.10,999.00  Description*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off                                                                                       ₹.12,999.00 Ro + minerals + *alkalin + uv                                                                       ₹.13,999.00 Ro + minerals. + copper+ uv uf                                                                  ₹.10,999.00  Description*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off"
+        ],
+        "variants": [
+            {
+                "name": "Finpure-Metallic White",
+                "price": 12999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c2727e9722.87011439.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "finpure-puro-pink-1",
+        "name": "Finpure-Puro Pink",
+        "image": "assets/uploads/img_6a55c2efac4a97.87020499.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals+uv                                                                                             ₹.12,999.00 Ro + minerals + *alkalin + uv                                                                       ₹.13,999.00 Ro + minerals. + copper+ uv uf                                                                  ₹.10,999.00  Description*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off                                                                                       ₹.12,999.00 Ro + minerals + *alkalin + uv                                                                       ₹.13,999.00 Ro + minerals. + copper+ uv uf                                                                  ₹.10,999.00  Description*For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -9 *Food grade non breakable ABS plastic  *Datachable tank *9 liters storage *LED Indicator *Auto on off"
+        ],
+        "variants": [
+            {
+                "name": "Finpure-Puro Pink",
+                "price": 12999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c2f3a27280.51792069.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "lexzon-metallic-grey",
+        "name": "Lexzon-Metallic Grey",
+        "image": "assets/uploads/img_6a55c3495e5747.43551010.webp",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals                                                                                             ₹.9,999.00 Ro + minerals + *alkalin                                                                          ₹.10,999.00 Ro + minerals. + copper                                                                         ₹.10,999.00  Description*5Attractive colours Option *For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -10 L *Food grade non breakable ABS plastic  *Datachable tank *10 liters storage *LED Indicator *Auto on of"
+        ],
+        "variants": [
+            {
+                "name": "Lexzon-Metallic Grey",
+                "price": 9999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c34f120440.14963855.webp"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c35b832577.76394816.webp"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c3620db537.90701420.webp"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c366598818.41687361.jpeg"
+            },
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c36aef7247.86113507.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "lexzon-aqua-green",
+        "name": "Lexzon-Aqua Green",
+        "image": "assets/uploads/img_6a55c3b6d24305.12091014.webp",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals                                                                                             ₹.9,999.00 Ro + minerals + *alkalin                                                                          ₹.10,999.00 Ro + minerals. + copper                                                                         ₹.10,999.00  Description*5Attractive colours Option *For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -10 L *Food grade non breakable ABS plastic  *Datachable tank *10 liters storage *LED Indicator *Auto on of"
+        ],
+        "variants": [
+            {
+                "name": "Lexzon-Aqua Green",
+                "price": 9999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c3bb003df5.39146348.webp"
+            }
+        ]
+    },
+    {
+        "id": "hi-flo-metallic-cheery",
+        "name": "Hi-Flo-Metallic Cheery",
+        "image": "assets/uploads/img_6a55c405d6e320.52571119.jpeg",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals                                                                                             ₹.9,999.00 Ro + minerals + *alkalin                                                                          ₹.10,999.00 Ro + minerals. + copper                                                                         ₹.10,999.00  Description*5Attractive colours Option *For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -10 L *Food grade non breakable ABS plastic  *Datachable tank *10 liters storage *LED Indicator *Auto on of"
+        ],
+        "variants": [
+            {
+                "name": "Hi-Flo-Metallic Cheery",
+                "price": 9999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c40b5804d9.75669769.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "hi-flo-std-blue",
+        "name": "Hi-Flo-STD Blue",
+        "image": "assets/uploads/img_6a55c6e061e5c0.82638528.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals                                                                                             ₹.9,999.00 Ro + minerals + *alkalin                                                                          ₹.10,999.00 Ro + minerals. + copper                                                                         ₹.10,999.00  Description*5Attractive colours Option *For Wall mounting,counter top installation. *Production capacity -15 lph *Tank capacity -10 L *Food grade non breakable ABS plastic  *Datachable tank *10 liters storage *LED Indicator *Auto on of"
+        ],
+        "variants": [
+            {
+                "name": "Hi-Flo-STD Blue",
+                "price": 9999
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c6e4c304e9.61437003.avif"
+            }
+        ]
+    },
+    {
+        "id": "hi-flo-sky-blue",
+        "name": "Hi-Flo-Sky Blue",
+        "image": "assets/uploads/img_6a55c711b80841.03587686.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals                                                                                             ₹.9,500.00 Ro + minerals + *alkalin                                                                          ₹.10,500.00 Ro + minerals. + copper                                                                         ₹.10,500.00  Description*Production capacity -15 lph *Tank capacity -10 L *Food grade non breakable ABS plastic  *10 liters storage *LED Indicator *Auto on,off"
+        ],
+        "variants": [
+            {
+                "name": "Hi-Flo-Sky Blue",
+                "price": 9500
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c7167d7399.51191477.avif"
+            }
+        ]
+    },
+    {
+        "id": "hi-flo-metallic-grey",
+        "name": "Hi-Flo-Metallic Grey",
+        "image": "assets/uploads/img_6a55c7869bc9d6.95991351.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals                                                                                             ₹.9,500.00 Ro + minerals + *alkalin                                                                          ₹.10,500.00 Ro + minerals. + copper                                                                         ₹.10,500.00  Description*Production capacity -15 lph *Tank capacity -10 L *Food grade non breakable ABS plastic  *10 liters storage *LED Indicator *Auto on,off"
+        ],
+        "variants": [
+            {
+                "name": "Hi-Flo-Metallic Grey",
+                "price": 9500
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c78c277539.20015628.avif"
+            }
+        ]
+    },
+    {
+        "id": "hi-flo-metallic-black",
+        "name": "Hi-Flo-Metallic Black",
+        "image": "assets/uploads/img_6a55c82285d7c4.28692410.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Models: Ro + minerals                                                                                             ₹.9,500.00 Ro + minerals + *alkalin                                                                          ₹.10,500.00 Ro + minerals. + copper                                                                         ₹.10,500.00  Description*Production capacity -15 lph *Tank capacity -10 L *Food grade non breakable ABS plastic  *10 liters storage *LED Indicator *Auto on,off"
+        ],
+        "variants": [
+            {
+                "name": "Hi-Flo-Metallic Black",
+                "price": 9500
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c8270da860.87500555.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-purosis-grey",
+        "name": "Aqua Purosis Grey",
+        "image": "assets/uploads/img_6a55c86b055243.71766449.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [],
+        "variants": [
+            {
+                "name": "Aqua Purosis Grey",
+                "price": 12000
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c86fb02e05.90496571.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-purosis-black",
+        "name": "Aqua Purosis Black",
+        "image": "assets/uploads/img_6a55c8ba445246.49430605.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [],
+        "variants": [
+            {
+                "name": "Aqua Purosis Black",
+                "price": 12000
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55c8c02e5d40.38431194.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-box",
+        "name": "Aqua Box",
+        "image": "assets/uploads/img_6a55cda41a2721.60147705.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [],
+        "variants": [
+            {
+                "name": "Aqua Box",
+                "price": 12000
+            }
+        ],
+        "includedItems": "Stand, Cover, Pre-filter, Installation",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55cda9a98fc4.71345939.avif"
+            }
+        ]
+    },
+    {
+        "id": "lx-one-charcoal-black-metallic",
+        "name": "LX One - Charcoal Black Metallic",
+        "image": "assets/uploads/img_6a55ce05e361e7.80330707.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Ro + minerals Ro + minerals + copper"
+        ],
+        "variants": [
+            {
+                "name": "LX One - Charcoal Black Metallic",
+                "price": 9000
+            }
+        ],
+        "includedItems": "",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55ce156f44b3.72360290.avif"
+            }
+        ]
+    },
+    {
+        "id": "lx-one-polar-white",
+        "name": "LX One - Polar White",
+        "image": "assets/uploads/img_6a55ce6fe73787.09859735.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Ro + minerals Ro + minerals + copper"
+        ],
+        "variants": [
+            {
+                "name": "LX One - Polar White",
+                "price": 9000
+            }
+        ],
+        "includedItems": "",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55ce741f8d76.28490673.avif"
+            }
+        ]
+    },
+    {
+        "id": "lx-one-white-gold",
+        "name": "LX One - White Gold",
+        "image": "assets/uploads/img_6a55cedf4563b8.37669319.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Ro + mineralsRo + minerals + copper"
+        ],
+        "variants": [
+            {
+                "name": "LX One - White Gold",
+                "price": 9000
+            }
+        ],
+        "includedItems": "",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55cee30ce928.26496656.avif"
+            }
+        ]
+    },
+    {
+        "id": "lx-one-sapphire-silver",
+        "name": "LX One - Sapphire Silver",
+        "image": "assets/uploads/img_6a55cf304ee071.37553129.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Ro + mineralsRo + minerals + copper"
+        ],
+        "variants": [
+            {
+                "name": "LX One - Sapphire Silver",
+                "price": 9000
+            }
+        ],
+        "includedItems": "",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55cf385144d3.52322164.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-touch-metallic-grey",
+        "name": "Aqua Touch - Metallic Grey",
+        "image": "assets/uploads/img_6a55cfa6a0bf76.04988551.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Ro+minerals"
+        ],
+        "variants": [
+            {
+                "name": "Aqua Touch - Metallic Grey",
+                "price": 8500
+            }
+        ],
+        "includedItems": "",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55cfaab8dce6.87063853.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-touch-metallic-cherry",
+        "name": "Aqua Touch - Metallic Cherry",
+        "image": "assets/uploads/img_6a55d00335c026.98121092.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Ro+minerals"
+        ],
+        "variants": [
+            {
+                "name": "Aqua Touch - Metallic Cherry",
+                "price": 8500
+            }
+        ],
+        "includedItems": "",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55d0076229a5.99204254.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-touch-metallic-black",
+        "name": "Aqua Touch - Metallic Black",
+        "image": "assets/uploads/img_6a55d0406f7ab0.04748150.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Ro+minerals"
+        ],
+        "variants": [
+            {
+                "name": "Aqua Touch - Metallic Black",
+                "price": 8500
+            }
+        ],
+        "includedItems": "",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55d044082617.67002954.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-touch-blue",
+        "name": "Aqua Touch - Blue",
+        "image": "assets/uploads/img_6a55d26d552a42.77320769.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Ro+minerals"
+        ],
+        "variants": [
+            {
+                "name": "Aqua Touch - Blue",
+                "price": 8500
+            }
+        ],
+        "includedItems": "",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55d273ce2eb6.69882277.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-touch-aqua-blue",
+        "name": "Aqua Touch - Aqua Blue",
+        "image": "assets/uploads/img_6a55d3933cd4b8.66732349.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Ro+minerals"
+        ],
+        "variants": [
+            {
+                "name": "Aqua Touch - Aqua Blue",
+                "price": 8500
+            }
+        ],
+        "includedItems": "",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55d397073fe5.40734345.avif"
+            }
+        ]
+    },
+    {
+        "id": "bioh2aaa-minerlising-filter",
+        "name": "Bio+H2AAA+ Minerlising Filter",
+        "image": "assets/uploads/img_6a55d40f5b2ab9.24268940.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Ro + minerals Ro + minerals + Alkaline"
+        ],
+        "variants": [
+            {
+                "name": "Bio+H2AAA+ Minerlising Filter",
+                "price": 11000
+            }
+        ],
+        "includedItems": "",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55d41544a3f7.88173384.avif"
+            }
+        ]
+    },
+    {
+        "id": "bio-zinc-copper-bwpa-filter",
+        "name": "Bio+ Zinc & Copper BWPA Filter",
+        "image": "assets/uploads/img_6a55d52be52861.27618519.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Ro + minerals Ro + minerals + Alkaline"
+        ],
+        "variants": [
+            {
+                "name": "Bio+ Zinc & Copper BWPA Filter",
+                "price": 11000
+            }
+        ],
+        "includedItems": "",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55d52f0765b8.59058536.avif"
+            }
+        ]
+    },
+    {
+        "id": "bio-h2aaa-8-swpk-filter",
+        "name": "Bio+ H2AAA 8\" SWPK Filter",
+        "image": "assets/uploads/img_6a55d58dc17567.50014843.avif",
+        "colorImages": [],
+        "category": "domestic-water-purifiers",
+        "descriptionList": [
+            "Ro + minerals Ro + minerals + Alkaline"
+        ],
+        "variants": [
+            {
+                "name": "Bio+ H2AAA 8\" SWPK Filter",
+                "price": 11000
+            }
+        ],
+        "includedItems": "",
+        "colors": [
+            {
+                "name": "",
+                "image": "assets/uploads/img_6a55d596e49708.43630050.avif"
+            }
+        ]
+    },
+    {
+        "id": "aqua-mars",
+        "name": "Aqua Mars",
+        "image": "assets/uploads/img_6a6ae2a64a1643.23286899.png",
+        "colors": [
+            {
+                "name": "Pink",
+                "image": "assets/uploads/img_6a6ae30d1b3510.27534634.png"
+            },
+            {
+                "name": "Yellow",
+                "image": "assets/uploads/img_6a6ae32228aaa1.35235365.png"
+            }
+        ],
+        "category": "multibrand-water-purifiers",
+        "descriptionList": [
+            "Laptop",
+            "Mouse",
+            "Camera"
+        ],
+        "variants": [
+            {
+                "name": "aa",
+                "price": 100
+            },
+            {
+                "name": "bb",
+                "price": 200
+            },
+            {
+                "name": "cc",
+                "price": 300
+            }
+        ],
+        "includedItems": "Boori, Idly, Pongal"
+    }
+]

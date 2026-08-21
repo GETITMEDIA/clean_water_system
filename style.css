@@ -1,0 +1,649 @@
+/* =========================================================
+   CLEAN WATER SYSTEM — NAVBAR
+   Organized: Variables -> Reset -> Base -> Navbar -> Logo ->
+   Menu -> Dropdown -> Right section -> CTA -> Mobile -> Demo
+   ========================================================= */
+
+/* ---------- 1. CSS VARIABLES ---------- */
+:root {
+  --primary-blue: #0D5EF4;
+  --dark-navy: #0F2D5C;
+  --light-blue: #EAF4FF;
+  --white: #FFFFFF;
+  --text: #222222;
+  --text-muted: #5A6472;
+  --border: #E5E7EB;
+
+  --font-main: 'Poppins', sans-serif;
+
+  --navbar-height: 90px;
+  --navbar-radius: 22px;
+  --navbar-max-width: 1400px;
+
+  --transition-fast: 0.25s ease;
+  --transition-medium: 0.35s ease;
+
+  --shadow-soft: 0 10px 35px rgba(15, 45, 92, 0.08), 0 2px 8px rgba(15, 45, 92, 0.05);
+  --shadow-strong: 0 16px 45px rgba(15, 45, 92, 0.16), 0 4px 14px rgba(15, 45, 92, 0.08);
+  --shadow-cta: 0 10px 22px rgba(13, 94, 244, 0.32);
+  --shadow-cta-hover: 0 14px 28px rgba(15, 45, 92, 0.35);
+}
+
+/* ---------- 2. RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+svg {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- 3. BASE ---------- */
+/* No global scroll-behavior: smooth here — script.js already calls
+   scrollIntoView({ behavior: 'smooth' }) per nav click. A global rule
+   would smooth/animate ALL scrolling, including raw wheel input on
+   the frame-sequence hero, fighting its 1:1 scroll-to-frame mapping. */
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text);
+  background: #F7FAFD;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  /* The mobile slide-in nav menu sits off-screen via translateX(100%)
+     when closed — without clipping horizontal overflow here, that
+     off-canvas content still counts toward the page's scrollable
+     width, producing a real (if subtle) horizontal scrollbar. */
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+/* The navbar is position:fixed (zero layout height), so any anchor
+   target scrolled flush to the viewport top would have its top
+   content hidden behind it. Reserve that height as scroll offset
+   on every element nav links/dropdown links can point to. */
+section[id],
+.premium-card[id] {
+  scroll-margin-top: 120px;
+}
+
+/* ---------- 4. NAVBAR WRAPPER / SHELL ---------- */
+.navbar-wrapper {
+  /* Fixed (not sticky) so it floats over the full-bleed hero below it
+     without reserving any layout height — this header is always
+     pinned to the viewport top anyway, so the visual result is the
+     same as sticky, but nothing pushes the page content down. */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 24px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  max-width: var(--navbar-max-width);
+  height: var(--navbar-height);
+  margin: 25px auto 0;
+  padding: 0 40px;
+  background: var(--white);
+  border-radius: var(--navbar-radius);
+  box-shadow: var(--shadow-soft);
+  transition: margin var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+/* Enhanced shadow + tighter top gap once the page is scrolled */
+.navbar-wrapper.scrolled .navbar {
+  margin-top: 14px;
+  box-shadow: var(--shadow-strong);
+}
+
+/* ---------- 5. LOGO ---------- */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.navbar-logo-img {
+  display: block;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.navbar-logo-text {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--dark-navy);
+  white-space: nowrap;
+}
+
+/* ---------- 6. CENTER NAV MENU ---------- */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+/* "Get a Quote" duplicate for inside the mobile slide-in menu — hidden on
+   desktop, where the real CTA button in .navbar-right already covers this.
+   Shown only inside the <=1024px breakpoint below. */
+.nav-item-cta {
+  display: none;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: var(--text);
+  padding: 10px 2px;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--primary-blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--primary-blue);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link.active {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ---------- 7. PRODUCTS DROPDOWN ---------- */
+.dropdown-arrow {
+  transition: transform var(--transition-fast);
+}
+
+.dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  min-width: 270px;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: var(--shadow-strong);
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-8px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
+  z-index: 10;
+}
+
+@media (min-width: 881px) {
+  .dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu,
+  .dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Invisible bridge over the gap between the "Products" button and the
+     dropdown menu (top: calc(100% + 18px) below) — always present (not
+     tied to hover state), so the mouse never loses :hover on .dropdown
+     while crossing that empty space on its way down into the menu. */
+  .dropdown::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 18px;
+  }
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--text);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus-visible {
+  background: var(--light-blue);
+  color: var(--primary-blue);
+}
+
+/* ---------- 8. RIGHT SECTION ---------- */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-shrink: 0;
+}
+
+.divider {
+  width: 1px;
+  height: 38px;
+  background: var(--border);
+}
+
+.call-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.call-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--light-blue);
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.call-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.call-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.call-number {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  white-space: nowrap;
+}
+
+.call-number a {
+  color: inherit;
+  transition: opacity var(--transition-fast);
+}
+
+.call-number a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- 9. CTA BUTTON ---------- */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-blue);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 26px;
+  border-radius: 30px;
+  box-shadow: var(--shadow-cta);
+  white-space: nowrap;
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.cta-button:hover {
+  background: var(--dark-navy);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-cta-hover);
+}
+
+.cta-icon {
+  flex-shrink: 0;
+}
+
+/* ---------- 10. MOBILE HAMBURGER TOGGLE ---------- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.menu-toggle .bar {
+  width: 100%;
+  height: 2.4px;
+  border-radius: 2px;
+  background: var(--dark-navy);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(7.4px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-7.4px) rotate(-45deg);
+}
+
+/* ---------- 11. MOBILE OVERLAY ---------- */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 45, 92, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-medium), visibility var(--transition-medium);
+  z-index: 998;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---------- 12. FOCUS STATES (ACCESSIBILITY) ---------- */
+.nav-link:focus-visible,
+.dropdown-toggle:focus-visible,
+.cta-button:focus-visible,
+.menu-toggle:focus-visible,
+.call-number a:focus-visible,
+.navbar-logo:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+/* ----- Large desktop tighten: condense spacing before the hamburger kicks in ----- */
+@media (max-width: 1366px) {
+  .navbar {
+    padding: 0 22px;
+    gap: 14px;
+  }
+  .nav-menu {
+    gap: 13px;
+  }
+  .nav-link {
+    font-size: 14px;
+  }
+  .navbar-right {
+    gap: 14px;
+  }
+  .call-label {
+    display: none;
+  }
+  .call-icon {
+    width: 38px;
+    height: 38px;
+  }
+  .cta-button {
+    padding: 12px 22px;
+    font-size: 14.5px;
+  }
+}
+
+/* ----- Tablet/Mobile: hamburger + full-screen slide-in menu -----
+   6 nav items + phone widget + CTA cannot fit horizontally below
+   this width without overflowing or wrapping, so tablets switch
+   to the slide-in menu here too; logo/nav are also scaled down. */
+@media (max-width: 1024px) {
+  .navbar {
+    height: 80px;
+    padding: 0 22px;
+    gap: 12px;
+  }
+
+  .logo-title {
+    font-size: 22px;
+  }
+  .logo-subtitle {
+    font-size: 9.5px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(360px, 85%);
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    padding: 110px 32px 40px;
+    box-shadow: -10px 0 40px rgba(15, 45, 92, 0.14);
+    transform: translateX(100%);
+    transition: transform var(--transition-medium);
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    font-size: 17px;
+    padding: 14px 4px;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link.active {
+    background: var(--light-blue);
+    border-radius: 10px;
+    padding-left: 14px;
+  }
+
+  .dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    box-shadow: none;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 0 0 10px;
+    transition: max-height var(--transition-medium), padding var(--transition-fast);
+  }
+
+  .dropdown.open .dropdown-menu {
+    max-height: 440px;
+    padding: 6px 0 6px 10px;
+  }
+
+  /* Phone block AND the top-bar CTA button are both hidden once the
+     hamburger takes over — the CTA moves inside the slide-in menu instead
+     (as .nav-item-cta below) so it doesn't fight the logo/hamburger for
+     space in the cramped mobile top bar. */
+  .divider,
+  .call-section,
+  .navbar-right .cta-button {
+    display: none;
+  }
+
+  .navbar-right {
+    gap: 0;
+  }
+
+  .nav-item-cta {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-cta-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: var(--primary-blue);
+    color: var(--white);
+    font-size: 15.5px;
+    font-weight: 600;
+    padding: 14px 20px;
+    border-radius: 30px;
+    box-shadow: var(--shadow-cta);
+    transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .nav-cta-link:hover,
+  .nav-cta-link:active {
+    background: var(--dark-navy);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-cta-hover);
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-wrapper {
+    padding: 0 14px;
+  }
+  .navbar {
+    padding: 0 16px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-wrapper {
+    padding: 0 10px;
+  }
+  .navbar {
+    padding: 0 12px;
+    gap: 8px;
+    border-radius: 18px;
+  }
+  .navbar-logo {
+    gap: 10px;
+  }
+  .logo-title {
+    font-size: 18px;
+  }
+  .logo-subtitle {
+    font-size: 8.5px;
+    letter-spacing: 1px;
+    gap: 4px;
+  }
+  .logo-subtitle .line {
+    width: 8px;
+  }
+  .logo-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+  .cta-button {
+    padding: 9px 14px;
+    font-size: 12.5px;
+    gap: 5px;
+  }
+}
+
+

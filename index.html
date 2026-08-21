@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/avif" href="assets/images/logo.avif" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean Water System</title>
+  <meta name="description" content="Clean Water System - Premium water purification products and services." />
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="styles/hero-slider.css?v=4" />
+  <link rel="stylesheet" href="styles/products.css?v=2" />
+  <link rel="stylesheet" href="styles/products-page.css?v=2" />
+  <link rel="stylesheet" href="styles/testimonials.css" />
+  <link rel="stylesheet" href="styles/quote.css" />
+  <link rel="stylesheet" href="styles/footer.css?v=4" />
+  <link rel="stylesheet" href="styles/responsive.css?v=1" />
+</head>
+<body>
+
+  <!-- ============ HEADER / NAVBAR ============ -->
+  <header class="navbar-wrapper" id="navbarWrapper">
+    <nav class="navbar" aria-label="Primary navigation">
+
+      <!-- Logo -->
+      <a href="#home" class="navbar-logo" data-link aria-label="Clean Water System - Home">
+        <img src="assets/images/logo.avif" alt="Clean Water System" class="navbar-logo-img" width="52" height="52" />
+        <span class="navbar-logo-text">CLEAN WATER SYSTEM</span>
+      </a>
+
+      <!-- Mobile hamburger toggle -->
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Center navigation menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link active" data-link aria-current="page">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item dropdown" id="productsDropdown">
+          <button class="nav-link dropdown-toggle" id="productsToggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="productsMenu">
+            Products
+            <svg class="dropdown-arrow" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="dropdown-menu" id="productsMenu" aria-label="Products submenu">
+            <li><a href="multibrand-water-purifiers.html">Multibrand Water Purifiers</a></li>
+            <li><a href="domestic-water-purifiers.html">Domestic Water Purifiers</a></li>
+            <li><a href="industrial-commercial-ro-plants.html">Industrial and Commercial RO Plants</a></li>
+            <li><a href="water-softener-plant.html">Water Softener Plant</a></li>
+            <li><a href="iron-removal-plant.html">Iron Removal Plant</a></li>
+            <li><a href="water-conditioner.html">Water Conditioner</a></li>
+            <li><a href="sand-filter.html">Sand Filter</a></li>
+            <li><a href="automatic-level-controller.html">Automatic Level Controller</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </li>
+        <li class="nav-item nav-item-cta">
+          <a href="#quote" class="nav-cta-link" data-link><svg class="cta-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C12 2 5 11 5 15.5C5 19.6 8.4 23 12 23C15.6 23 19 19.6 19 15.5C19 11 12 2 12 2Z"></path></svg><span>Get a Quote</span></a>
+        </li>
+      </ul>
+
+      <!-- Right section: divider + call info + CTA -->
+      <div class="navbar-right">
+        <span class="divider" aria-hidden="true"></span>
+
+        <div class="call-section">
+          <span class="call-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"></path>
+            </svg>
+          </span>
+          <span class="call-text">
+            <span class="call-label">Call Us Now</span>
+            <span class="call-number"><a href="tel:+919600879192">96008 79192</a> / <a href="tel:+919043729192">90437 29192</a></span>
+          </span>
+        </div>
+
+        <a href="#quote" class="cta-button" data-link>
+          <svg class="cta-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 2C12 2 5 11 5 15.5C5 19.6 8.4 23 12 23C15.6 23 19 19.6 19 15.5C19 11 12 2 12 2Z"></path>
+          </svg>
+          <span>Get a Quote</span>
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Overlay shown behind the mobile slide-in menu -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ============ HERO: 5-slide premium product carousel ============ -->
+  <section class="hs-hero" id="home" aria-label="Hero"></section>
+
+  <main>
+    <!-- ============ PRODUCTS: premium range showcase ============ -->
+    <section class="premium-products" id="products" aria-labelledby="productsHeading">
+      <div class="premium-products-bg" aria-hidden="true">
+        <span class="bg-glow bg-glow-left"></span>
+        <span class="bg-glow bg-glow-right"></span>
+
+        <svg class="bg-waterline" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,60 C240,15 480,105 720,60 C960,15 1200,105 1440,60" fill="none" stroke="rgba(21,125,255,0.16)" stroke-width="2"></path>
+        </svg>
+
+        <div class="droplet-layer" id="dropletLayer"></div>
+      </div>
+
+      <div class="premium-products-inner">
+        <header class="premium-products-heading">
+          <p class="section-label">Our Premium Range</p>
+          <span class="label-underline" aria-hidden="true"></span>
+          <h2 class="section-heading" id="productsHeading">
+            <span class="heading-dark">Pure Innovation.</span>
+            <span class="heading-blue">Pure Water.</span>
+          </h2>
+          <p class="section-subtitle">Advanced technology. Trusted performance. Better living.</p>
+        </header>
+
+        <!-- Category sections (8 categories x 4 cards) are rendered here from components/productsData.js -->
+        <div id="categoriesContainer"></div>
+
+        <div class="view-more-wrap">
+          <a href="products.html" class="view-more-btn">
+            <span>View More Products</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="13 6 19 12 13 18"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS: auto-sliding carousel ============ -->
+    <section class="testimonials-section" id="testimonials" aria-labelledby="testimonialsHeading"></section>
+
+    <section id="quote" class="quote-section">
+      <div class="quote-inner">
+        <header class="quote-heading">
+          <p class="section-label">Get a Quote</p>
+          <span class="label-underline" aria-hidden="true"></span>
+          <h2>Get Your Free, No-Obligation Quote</h2>
+          <p class="quote-subtitle">Tell us what you need and our team will get back to you with the right solution and a transparent price — usually within a few hours.</p>
+        </header>
+
+        <div class="quote-grid">
+          <div class="quote-perks" id="quotePerks">
+            <div class="quote-perk">
+              <span class="quote-perk-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <h3>Free Site Visit</h3>
+                <p>Our technician assesses your water source before you commit to anything.</p>
+              </div>
+            </div>
+            <div class="quote-perk">
+              <span class="quote-perk-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              <div>
+                <h3>Fast Response</h3>
+                <p>We typically get back to you within a few hours, not days.</p>
+              </div>
+            </div>
+            <div class="quote-perk">
+              <span class="quote-perk-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </span>
+              <div>
+                <h3>No Obligation</h3>
+                <p>A quote is just information — there's zero pressure to buy.</p>
+              </div>
+            </div>
+            <div class="quote-perk">
+              <span class="quote-perk-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6Z"/><polyline points="9 12 11 14 15 10"/></svg>
+              </span>
+              <div>
+                <h3>Genuine Products</h3>
+                <p>Certified components and transparent, honest pricing, always.</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="quote-form-card" id="quoteForm" novalidate>
+            <div class="quote-form-grid">
+              <div class="quote-field">
+                <label for="qName">Your Name *</label>
+                <input type="text" id="qName" name="name" required />
+              </div>
+              <div class="quote-field">
+                <label for="qPhone">Phone Number *</label>
+                <input type="tel" id="qPhone" name="phone" required />
+              </div>
+              <div class="quote-field">
+                <label for="qEmail">Email</label>
+                <input type="email" id="qEmail" name="email" />
+              </div>
+              <div class="quote-field">
+                <label for="qCategory">Interested In</label>
+                <select id="qCategory" name="category">
+                  <option value="">Select a product category</option>
+                </select>
+              </div>
+              <div class="quote-field">
+                <label for="qCity">City / Location</label>
+                <input type="text" id="qCity" name="city" />
+              </div>
+              <div class="quote-field full">
+                <label for="qMessage">Additional Details</label>
+                <textarea id="qMessage" name="message" rows="3"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="quote-submit-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              <span>Get My Free Quote</span>
+            </button>
+            <p class="quote-form-note">Sending opens WhatsApp with your details pre-filled, ready to send to our team.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="siteFooter"></footer>
+  <script src="script.js"></script>
+  <script type="module">
+    import HeroSlider from './components/HeroSlider.js';
+    import ProductShowcase from './components/ProductShowcase.js';
+    import ProductsPage from './components/ProductsPage.js?v=4';
+    import Testimonials from './components/Testimonials.js';
+    import QuoteSection from './components/QuoteSection.js';
+    import Footer from './components/Footer.js?v=5';
+    import { initProducts, getAllCategories, WHATSAPP_NUMBER } from './components/productsData.js?v=4';
+
+    await initProducts();
+
+    new HeroSlider({ root: '#home' });
+
+    new ProductShowcase({
+      root: '#products',
+      dropletLayer: '#dropletLayer',
+    });
+
+    new ProductsPage({ container: '#categoriesContainer' });
+    new Testimonials({ root: '#testimonials' });
+    new QuoteSection({
+      formSelector: '#quoteForm',
+      categorySelector: '#qCategory',
+      categories: getAllCategories(),
+      whatsappNumber: WHATSAPP_NUMBER,
+    });
+    new Footer({ root: '#siteFooter' });
+  </script>
+</body>
+</html>

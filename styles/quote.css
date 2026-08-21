@@ -1,0 +1,220 @@
+/* =========================================================
+   GET A QUOTE (homepage section)
+   Relies on the CSS variables defined in style.css (:root)
+   ========================================================= */
+
+.quote-section {
+  padding: 90px 24px;
+  background: linear-gradient(160deg, #eaf6ff 0%, #d3ebff 100%);
+}
+
+.quote-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quote-heading {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 50px;
+}
+
+.quote-heading .section-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #157dff;
+}
+
+.quote-heading .label-underline {
+  display: block;
+  width: 60px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #157dff, rgba(21, 125, 255, 0.15));
+  margin: 14px auto 20px;
+}
+
+.quote-heading h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #062b63;
+  margin-bottom: 14px;
+}
+
+.quote-subtitle {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #45597a;
+}
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ---------- Perks ---------- */
+.quote-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.quote-perk {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(6, 43, 99, 0.07);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.quote-perk.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote-perk:nth-child(1) { transition-delay: 0s; }
+.quote-perk:nth-child(2) { transition-delay: 0.08s; }
+.quote-perk:nth-child(3) { transition-delay: 0.16s; }
+.quote-perk:nth-child(4) { transition-delay: 0.24s; }
+
+.quote-perk-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #dff4ff;
+  color: #157dff;
+}
+
+.quote-perk h3 {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #062b63;
+  margin-bottom: 4px;
+}
+
+.quote-perk p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #5b6b82;
+}
+
+/* ---------- Form ---------- */
+.quote-form-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 36px;
+  box-shadow: 0 20px 50px rgba(6, 43, 99, 0.09);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s;
+}
+
+.quote-form-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+.quote-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.quote-field.full {
+  grid-column: 1 / -1;
+}
+
+.quote-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #062b63;
+}
+
+.quote-field input,
+.quote-field select,
+.quote-field textarea {
+  border: 1px solid #dbe6f2;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 14.5px;
+  color: #222222;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quote-field input:focus,
+.quote-field select:focus,
+.quote-field textarea:focus {
+  outline: none;
+  border-color: #157dff;
+  box-shadow: 0 0 0 3px rgba(21, 125, 255, 0.12);
+}
+
+.quote-field textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.quote-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #2f7dff, #0d5ef4);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(13, 94, 244, 0.32);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.quote-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(13, 94, 244, 0.44);
+}
+
+.quote-form-note {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: #8493a6;
+  text-align: center;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .quote-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .quote-section { padding: 60px 20px; }
+  .quote-heading h2 { font-size: 25px; }
+  .quote-form-grid { grid-template-columns: 1fr; }
+  .quote-form-card { padding: 26px 20px; }
+}

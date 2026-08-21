@@ -1,0 +1,175 @@
+/* =========================================================
+   INDUSTRIAL & COMMERCIAL RO PLANTS — custom hero + alternating
+   product showcase for this single category page.
+   ========================================================= */
+
+/* ---------- Hero ---------- */
+.irp-hero {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.irp-hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.irp-hero-banner {
+  position: relative;
+  margin-top: -1px;
+  padding: 20px 24px;
+  background: linear-gradient(100deg, #062b63 0%, #0d5ef4 60%, #157dff 100%);
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+}
+
+.irp-hero-banner p {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: right;
+}
+
+/* ---------- Product showcase ---------- */
+.irp-showcase {
+  background: #ffffff;
+}
+
+.irp-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 60px max(24px, calc((100% - 1200px) / 2));
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.irp-row.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.irp-row:nth-child(even) {
+  background: #f4f8fc;
+  flex-direction: row-reverse;
+}
+
+.irp-row-image {
+  flex: 0 0 auto;
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.irp-row-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(6, 43, 99, 0.15));
+  transition: transform 0.4s ease;
+}
+
+.irp-row:hover .irp-row-image img {
+  transform: scale(1.04);
+}
+
+.irp-row-text {
+  flex: 1;
+  min-width: 0;
+  max-width: 620px;
+}
+
+.irp-row-text h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #062b63;
+}
+
+.irp-underline {
+  display: block;
+  width: 54px;
+  height: 3px;
+  border-radius: 3px;
+  margin: 14px 0 18px;
+  background: linear-gradient(90deg, #157dff, rgba(21, 125, 255, 0.15));
+}
+
+.irp-row-text p {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: #45597a;
+}
+
+.irp-enquire-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 24px;
+  padding: 13px 30px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #2f7dff, #0d5ef4);
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 700;
+  box-shadow: 0 14px 30px rgba(13, 94, 244, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.irp-enquire-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(13, 94, 244, 0.45);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .irp-row,
+  .irp-row:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 44px 24px;
+  }
+  .irp-row-image {
+    width: 260px;
+  }
+  .irp-underline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .irp-hero-banner p {
+    text-align: center;
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 520px) {
+  .irp-hero-banner {
+    padding: 18px 18px 22px;
+    clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%);
+  }
+  .irp-row-text h2 {
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .irp-row {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  .irp-row-image img {
+    transition: none;
+  }
+}

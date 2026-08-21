@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/avif" href="assets/images/logo.avif" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Conditioner - Clean Water System</title>
+  <meta name="description" content="Browse all Water Conditioner products from Clean Water System." />
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="styles/water-softener.css" />
+  <link rel="stylesheet" href="styles/products.css?v=2" />
+  <link rel="stylesheet" href="styles/products-page.css?v=2" />
+  <link rel="stylesheet" href="styles/product-detail.css?v=3" />
+  <link rel="stylesheet" href="styles/footer.css?v=4" />
+  <link rel="stylesheet" href="styles/responsive.css?v=1" />
+</head>
+<body>
+
+  <!-- ============ HEADER / NAVBAR ============ -->
+  <header class="navbar-wrapper" id="navbarWrapper">
+    <nav class="navbar" aria-label="Primary navigation">
+
+      <!-- Logo -->
+      <a href="index.html#home" class="navbar-logo" aria-label="Clean Water System - Home">
+        <img src="assets/images/logo.avif" alt="Clean Water System" class="navbar-logo-img" width="52" height="52" />
+        <span class="navbar-logo-text">CLEAN WATER SYSTEM</span>
+      </a>
+
+      <!-- Mobile hamburger toggle -->
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Center navigation menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="index.html#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item dropdown" id="productsDropdown">
+          <button class="nav-link dropdown-toggle active" id="productsToggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="productsMenu">
+            Products
+            <svg class="dropdown-arrow" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="dropdown-menu" id="productsMenu" aria-label="Products submenu">
+            <li><a href="multibrand-water-purifiers.html">Multibrand Water Purifiers</a></li>
+            <li><a href="domestic-water-purifiers.html">Domestic Water Purifiers</a></li>
+            <li><a href="industrial-commercial-ro-plants.html">Industrial and Commercial RO Plants</a></li>
+            <li><a href="water-softener-plant.html">Water Softener Plant</a></li>
+            <li><a href="iron-removal-plant.html">Iron Removal Plant</a></li>
+            <li><a href="water-conditioner.html">Water Conditioner</a></li>
+            <li><a href="sand-filter.html">Sand Filter</a></li>
+            <li><a href="automatic-level-controller.html">Automatic Level Controller</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </li>
+        <li class="nav-item nav-item-cta">
+          <a href="index.html#quote" class="nav-cta-link"><svg class="cta-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C12 2 5 11 5 15.5C5 19.6 8.4 23 12 23C15.6 23 19 19.6 19 15.5C19 11 12 2 12 2Z"></path></svg><span>Get a Quote</span></a>
+        </li>
+      </ul>
+
+      <!-- Right section: divider + call info + CTA -->
+      <div class="navbar-right">
+        <span class="divider" aria-hidden="true"></span>
+
+        <div class="call-section">
+          <span class="call-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"></path>
+            </svg>
+          </span>
+          <span class="call-text">
+            <span class="call-label">Call Us Now</span>
+            <span class="call-number"><a href="tel:+919600879192">96008 79192</a> / <a href="tel:+919043729192">90437 29192</a></span>
+          </span>
+        </div>
+
+        <a href="index.html#quote" class="cta-button">
+          <svg class="cta-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 2C12 2 5 11 5 15.5C5 19.6 8.4 23 12 23C15.6 23 19 19.6 19 15.5C19 11 12 2 12 2Z"></path>
+          </svg>
+          <span>Get a Quote</span>
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Overlay shown behind the mobile slide-in menu -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="ws-hero">
+      <span class="ws-orb ws-orb-a" aria-hidden="true"></span>
+      <span class="ws-orb ws-orb-b" aria-hidden="true"></span>
+      <span class="ws-droplet ws-droplet-1" aria-hidden="true"></span>
+      <span class="ws-droplet ws-droplet-2" aria-hidden="true"></span>
+      <span class="ws-droplet ws-droplet-3" aria-hidden="true"></span>
+
+      <div class="ws-hero-inner">
+        <div class="ws-hero-text">
+          <p class="ws-tag">Salt-Free Limescale Protection</p>
+          <h1 class="ws-hero-heading">Water<br><span class="ws-accent">Conditioner.</span></h1>
+          <span class="ws-underline" aria-hidden="true"></span>
+          <p class="ws-hero-desc">Our water conditioners prevent limescale build-up in plumbing without salt or wastewater — a low-maintenance alternative to a traditional softener for pipes and appliances.</p>
+          <div class="ws-hero-cta">
+            <a href="https://wa.me/919600879192?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20the%20Water%20Conditioner." target="_blank" rel="noopener" class="ws-btn ws-btn-primary">Enquire Now</a>
+            <a href="index.html#quote" class="ws-btn ws-btn-ghost">Get a Quote</a>
+          </div>
+        </div>
+
+        <div class="ws-hero-visual">
+          <span class="ws-hero-glow" aria-hidden="true"></span>
+          <span class="ws-hero-ring" aria-hidden="true"></span>
+          <img class="ws-hero-photo" src="assets/products/water-treatments/4.avif" alt="Water Conditioner unit" width="330" height="330">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT SHOWCASE ============ -->
+    <section class="ws-showcase">
+
+      <div class="ws-row">
+        <div class="ws-row-image">
+          <img src="assets/products/water-treatments/4.avif" alt="Water Conditioner unit" loading="lazy" width="330" height="330">
+        </div>
+        <div class="ws-row-text">
+          <h2>Water Conditioner and More</h2>
+          <span class="ws-row-underline" aria-hidden="true"></span>
+          <p class="ws-row-subhead">What does a water conditioner do?</p>
+          <p>A water conditioner prevents limescale build-up in plumbing by changing the chemical make-up of the water, without actually softening it — it's often called a "salt-free water softener." It uses a template-assisted crystallization (TAC) media to catch minerals like magnesium and calcium; these build up until they break off in the output water, which stays hard but can no longer stick to pipes and appliances.</p>
+          <p>The key difference between a conditioner and a softener is that a conditioner uses no salt and produces no wastewater — instead of flushing brine to regenerate resin, it simply causes calcium and magnesium crystals to form on nucleation sites within the TAC media. Conditioners aren't quite as effective at preventing limescale as softeners, but they're a significant improvement over having no treatment system at all.</p>
+          <a href="https://wa.me/919600879192?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20the%20Water%20Conditioner." target="_blank" rel="noopener" class="ws-enquire-btn">Enquire Now</a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Populated by components/CategoryPage.js -->
+    <div id="categoryRoot"></div>
+  </main>
+
+  <footer id="siteFooter"></footer>
+  <script src="script.js"></script>
+  <script type="module">
+    import CategoryPage from './components/CategoryPage.js?v=3';
+    import Footer from './components/Footer.js?v=5';
+    import { revealOnScroll } from './components/scrollReveal.js?v=2';
+    import { initProducts } from './components/productsData.js?v=4';
+
+    await initProducts();
+    new CategoryPage({ container: '#categoryRoot', categoryId: 'water-conditioner' });
+    revealOnScroll(['.ws-row']);
+    new Footer({ root: '#siteFooter' });
+  </script>
+</body>
+</html>

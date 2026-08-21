@@ -1,0 +1,8 @@
+# Apache's bundled mime.types is missing newer image formats — without
+# this, .avif/.webp are served with no Content-Type header at all, which
+# breaks anything that inspects the fetched file's type (e.g. the
+# Enquire Now image share on product-detail pages).
+<IfModule mod_mime.c>
+  AddType image/avif .avif
+  AddType image/webp .webp
+</IfModule>

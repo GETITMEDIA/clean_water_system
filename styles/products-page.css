@@ -1,0 +1,249 @@
+/* =========================================================
+   ALL PRODUCTS PAGE — page header + per-category sections
+   Reuses the card/podium/button styles from styles/products.css
+   ========================================================= */
+
+.products-page-header {
+  text-align: center;
+  padding: 150px 24px 50px;
+  background: linear-gradient(180deg, #f8fcff 0%, #eaf6ff 100%);
+}
+
+.products-page-header .section-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #157dff;
+}
+
+.products-page-header .label-underline {
+  display: block;
+  width: 36px;
+  height: 3px;
+  border-radius: 3px;
+  background: #157dff;
+  margin: 10px auto 22px;
+}
+
+.page-title {
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #062b63;
+  margin-bottom: 14px;
+}
+
+.page-title .heading-blue {
+  color: #157dff;
+}
+
+.products-page-header .section-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #5b6b82;
+}
+
+/* ---------- Per-category section ---------- */
+.product-category-section {
+  padding: 64px 24px;
+  scroll-margin-top: 120px;
+}
+
+.product-category-section:nth-child(even) {
+  background: #f4f9fd;
+}
+
+.category-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Embedded on the homepage, the category sections sit inside the
+   premium-products section's own padded/gradient container — drop
+   the background banding and side padding so they don't double up
+   or misalign with the heading above them. */
+.premium-products-inner .product-category-section {
+  background: transparent;
+  padding: 48px 0;
+}
+
+.premium-products-inner .product-category-section:first-child {
+  padding-top: 0;
+}
+
+/* Subtle wave-line divider under each homepage category section */
+.premium-products-inner .product-category-section:not(:last-child) {
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.premium-products-inner .product-category-section:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  height: 28px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Ccircle cx='905' cy='10' r='3' fill='%23a9c9f5'/%3E%3Cpath d='M0,38 C240,10 480,55 720,32 C960,10 1200,55 1440,32' fill='none' stroke='%23c3ddf8' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none;
+}
+
+.category-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.category-heading h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #062b63;
+}
+
+.category-heading h2 .category-underline {
+  display: block;
+  width: 32px;
+  height: 3px;
+  border-radius: 3px;
+  background: #157dff;
+  margin-top: 10px;
+}
+
+.category-view-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 50px;
+  background: linear-gradient(120deg, #062b63 0%, #157dff 100%);
+  background-size: 160% 160%;
+  background-position: 0% 50%;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 14px 28px rgba(21, 125, 255, 0.3);
+  transition: background-position 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-view-more:hover {
+  background-position: 100% 50%;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px rgba(21, 125, 255, 0.4);
+}
+
+/* ---------- Single-category page (e.g. multibrand-water-purifiers.html) ---------- */
+.category-page-grid-wrap {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 48px 24px 100px;
+}
+
+/* ---------- Fallback showcase row (categories with no catalog products yet) ---------- */
+.cat-fallback-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 20px 0;
+}
+
+.cat-fallback-image {
+  flex: 0 0 auto;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-fallback-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(6, 43, 99, 0.15));
+  transition: transform 0.4s ease;
+}
+
+.cat-fallback-row:hover .cat-fallback-image img {
+  transform: scale(1.04);
+}
+
+.cat-fallback-text {
+  flex: 1;
+  min-width: 0;
+  max-width: 620px;
+}
+
+.cat-fallback-text h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #062b63;
+}
+
+.cat-fallback-underline {
+  display: block;
+  width: 54px;
+  height: 3px;
+  border-radius: 3px;
+  margin: 14px 0 18px;
+  background: linear-gradient(90deg, #157dff, rgba(21, 125, 255, 0.15));
+}
+
+.cat-fallback-text p {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: #45597a;
+}
+
+.cat-fallback-enquire-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 24px;
+  padding: 13px 30px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #2f7dff, #0d5ef4);
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 700;
+  box-shadow: 0 14px 30px rgba(13, 94, 244, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cat-fallback-enquire-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(13, 94, 244, 0.45);
+}
+
+@media (max-width: 640px) {
+  .products-page-header {
+    padding: 130px 20px 40px;
+  }
+  .page-title {
+    font-size: 30px;
+  }
+  .category-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cat-fallback-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 26px;
+  }
+  .cat-fallback-image {
+    width: 220px;
+  }
+  .cat-fallback-underline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,34 @@
+[
+    {
+        "id": "multibrand-water-purifiers",
+        "name": "Multibrand Water Purifiers"
+    },
+    {
+        "id": "domestic-water-purifiers",
+        "name": "Domestic Water Purifiers"
+    },
+    {
+        "id": "industrial-commercial-ro-plants",
+        "name": "Industrial and Commercial RO Plants"
+    },
+    {
+        "id": "water-softener-plant",
+        "name": "Water Softener Plant"
+    },
+    {
+        "id": "iron-removal-plant",
+        "name": "Iron Removal Plant"
+    },
+    {
+        "id": "water-conditioner",
+        "name": "Water Conditioner"
+    },
+    {
+        "id": "sand-filter",
+        "name": "Sand Filter"
+    },
+    {
+        "id": "automatic-level-controller",
+        "name": "Automatic Level Controller"
+    }
+]

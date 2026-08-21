@@ -1,0 +1,398 @@
+/* =========================================================
+   WATER SOFTENER PLANT — custom hero section for this category
+   page. Product section styling to follow.
+   ========================================================= */
+
+.ws-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 24px 90px;
+  background: linear-gradient(160deg, #eaf6ff 0%, #d3ebff 100%);
+}
+
+.ws-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.55;
+  pointer-events: none;
+  animation: ws-orb-float 12s ease-in-out infinite;
+}
+
+.ws-orb-a {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, #8ecbff, transparent 70%);
+  top: -80px;
+  left: -60px;
+}
+
+.ws-orb-b {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, #c8e8ff, transparent 70%);
+  bottom: -60px;
+  right: 10%;
+  animation-duration: 14s;
+  animation-delay: -4s;
+}
+
+@keyframes ws-orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -25px) scale(1.08); }
+}
+
+.ws-droplet {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50% 50% 50% 0;
+  background: linear-gradient(135deg, #5bb8ff, #0d5ef4);
+  opacity: 0;
+  transform: rotate(45deg);
+  animation: ws-droplet-rise 7s ease-in infinite;
+}
+
+.ws-droplet-1 { left: 12%; bottom: 10%; animation-delay: 0s; }
+.ws-droplet-2 { left: 30%; bottom: 5%; width: 6px; height: 6px; animation-delay: 2.2s; }
+.ws-droplet-3 { right: 18%; bottom: 15%; width: 10px; height: 10px; animation-delay: 4.4s; }
+
+@keyframes ws-droplet-rise {
+  0% { transform: translateY(0) rotate(45deg); opacity: 0; }
+  15% { opacity: 0.6; }
+  100% { transform: translateY(-220px) rotate(45deg); opacity: 0; }
+}
+
+.ws-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.ws-tag {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #157dff;
+}
+
+.ws-hero-heading {
+  margin-top: 12px;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: #062b63;
+}
+
+.ws-accent {
+  background: linear-gradient(90deg, #0d5ef4, #5bb8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ws-underline {
+  display: block;
+  width: 60px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #157dff, rgba(21, 125, 255, 0.15));
+  margin: 20px 0;
+}
+
+.ws-hero-desc {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #5b6b82;
+  max-width: 460px;
+}
+
+.ws-hero-cta {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ws-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 15px 28px;
+  border-radius: 32px;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.ws-btn-primary {
+  background: linear-gradient(135deg, #2f7dff, #0d5ef4);
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(13, 94, 244, 0.35);
+}
+
+.ws-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(13, 94, 244, 0.5);
+}
+
+.ws-btn-ghost {
+  background: #ffffff;
+  color: #062b63;
+  border: 1.5px solid #d7e6f7;
+}
+
+.ws-btn-ghost:hover {
+  border-color: #157dff;
+  color: #157dff;
+  transform: translateY(-3px);
+}
+
+.ws-hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ws-hero-glow {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(21, 125, 255, 0.28), rgba(21, 125, 255, 0));
+  filter: blur(20px);
+  animation: ws-glow-pulse 4.5s ease-in-out infinite;
+}
+
+@keyframes ws-glow-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.ws-hero-ring {
+  position: absolute;
+  width: 82%;
+  height: 82%;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(21, 125, 255, 0.35);
+  animation: ws-ring-spin 30s linear infinite;
+}
+
+@keyframes ws-ring-spin {
+  to { transform: rotate(360deg); }
+}
+
+.ws-hero-photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  filter: drop-shadow(0 30px 45px rgba(3, 15, 35, 0.2));
+  opacity: 0;
+  transform: scale(0.9) translateY(30px);
+  animation: ws-photo-in 1s 0.3s cubic-bezier(0.19, 1, 0.22, 1) forwards,
+             ws-photo-float 5s 1.3s ease-in-out infinite;
+}
+
+@keyframes ws-photo-in {
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes ws-photo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1080px) {
+  .ws-hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .ws-hero-visual { order: -1; max-width: 420px; margin: 0 auto; }
+  .ws-hero-desc { margin-left: auto; margin-right: auto; }
+  .ws-underline { margin-left: auto; margin-right: auto; }
+  .ws-hero-cta { justify-content: center; }
+}
+
+@media (max-width: 640px) {
+  .ws-hero { padding: 130px 20px 60px; }
+  .ws-hero-heading { font-size: 34px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ws-orb, .ws-droplet, .ws-hero-glow, .ws-hero-ring, .ws-hero-photo {
+    animation: none !important;
+  }
+  .ws-hero-photo { opacity: 1; transform: none; }
+}
+
+/* =========================================================
+   PRODUCT SHOWCASE
+   ========================================================= */
+.ws-showcase {
+  background: #ffffff;
+}
+
+.ws-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 60px max(24px, calc((100% - 1180px) / 2));
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.ws-row.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ws-row:nth-child(even) {
+  background: #eaf4fb;
+  flex-direction: row-reverse;
+}
+
+.ws-row-image {
+  flex: 0 0 auto;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ws-row-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(6, 43, 99, 0.15));
+  transition: transform 0.4s ease;
+}
+
+.ws-row-image-pair {
+  width: 340px;
+  gap: 14px;
+}
+
+.ws-row-image-pair img {
+  max-height: 260px;
+}
+
+.ws-row:hover .ws-row-image img {
+  transform: scale(1.04);
+}
+
+.ws-row-text {
+  flex: 1;
+  min-width: 0;
+  max-width: 640px;
+}
+
+.ws-row-text h2 {
+  font-size: 25px;
+  font-weight: 800;
+  color: #062b63;
+}
+
+.ws-row-underline {
+  display: block;
+  width: 54px;
+  height: 3px;
+  border-radius: 3px;
+  margin: 14px 0 16px;
+  background: linear-gradient(90deg, #157dff, rgba(21, 125, 255, 0.15));
+}
+
+.ws-row-subhead {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #157dff;
+  margin-bottom: 8px;
+}
+
+.ws-row-text p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #45597a;
+  margin-bottom: 12px;
+}
+
+.ws-row-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+.ws-enquire-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 13px 30px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #2f7dff, #0d5ef4);
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 700;
+  box-shadow: 0 14px 30px rgba(13, 94, 244, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ws-enquire-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(13, 94, 244, 0.45);
+}
+
+@media (max-width: 900px) {
+  .ws-row,
+  .ws-row:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+    padding: 44px 24px;
+  }
+  .ws-row-image,
+  .ws-row-image-pair {
+    width: 240px;
+  }
+  .ws-row-image-pair {
+    flex-direction: row;
+  }
+  .ws-row-underline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .ws-row-text h2 {
+    font-size: 21px;
+  }
+  .ws-row-image-pair {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ws-row {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  .ws-row-image img {
+    transition: none;
+  }
+}
