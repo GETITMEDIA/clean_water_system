@@ -653,3 +653,213 @@ section[id],
 }
 
 
+
+/* =========================================================
+   FLOATING WHATSAPP BUTTON  (injected by script.js)
+   ========================================================= */
+.wa-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 58px;
+  padding: 0 15px;
+  border-radius: 29px;
+  color: #fff;
+  background: #25d366;
+  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.42);
+  text-decoration: none;
+  overflow: hidden;
+  transition: gap 0.3s ease, padding 0.3s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.wa-float:hover,
+.wa-float:focus-visible {
+  gap: 10px;
+  padding-right: 22px;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.55);
+}
+
+/* The label slides out of the pill on hover rather than sitting there
+   permanently, so the button stays out of the way while reading. */
+.wa-float-label {
+  max-width: 0;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  transition: max-width 0.3s ease, opacity 0.25s ease;
+}
+
+.wa-float:hover .wa-float-label,
+.wa-float:focus-visible .wa-float-label {
+  max-width: 160px;
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .wa-float {
+    right: 16px;
+    bottom: 16px;
+    height: 52px;
+    padding: 0 12px;
+  }
+  /* No hover on touch, so the label would never appear — drop it. */
+  .wa-float-label { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-float,
+  .wa-float-label { transition: none; }
+}
+
+/* =========================================================
+   404 PAGE
+   ========================================================= */
+.nf-main {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 160px 24px 90px;
+  background: linear-gradient(160deg, #f2f8ff 0%, #ffffff 60%);
+}
+
+.nf-panel {
+  max-width: 620px;
+  text-align: center;
+}
+
+.nf-code {
+  margin: 0;
+  font-size: clamp(76px, 16vw, 140px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -2px;
+  background: linear-gradient(120deg, #062b63, #157dff 60%, #6fd0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nf-title {
+  margin: 10px 0 14px;
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 700;
+  color: #062b63;
+}
+
+.nf-desc {
+  margin: 0 auto 30px;
+  max-width: 460px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4b5b74;
+}
+
+.nf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.nf-btn {
+  padding: 13px 26px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nf-btn:hover {
+  transform: translateY(-3px);
+}
+
+.nf-btn-primary {
+  color: #fff;
+  background: linear-gradient(100deg, #0d5ef4, #157dff);
+  box-shadow: 0 12px 30px rgba(13, 94, 244, 0.35);
+}
+
+.nf-btn-ghost {
+  color: #062b63;
+  background: #fff;
+  border: 1.5px solid rgba(6, 43, 99, 0.15);
+}
+
+/* =========================================================
+   BACK-TO-TOP BUTTON  (injected by script.js)
+   Stacked directly above .wa-float, so the two never overlap.
+   ========================================================= */
+.to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 92px;
+  z-index: 900;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid rgba(6, 43, 99, 0.12);
+  border-radius: 50%;
+  color: #062b63;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 22px rgba(6, 43, 99, 0.18);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s,
+    color 0.2s ease, background 0.2s ease;
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.to-top:hover {
+  color: #fff;
+  background: linear-gradient(100deg, #0d5ef4, #157dff);
+  border-color: transparent;
+}
+
+@media (max-width: 640px) {
+  .to-top {
+    right: 16px;
+    bottom: 78px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .to-top { transition: opacity 0.2s ease; transform: none; }
+}
+
+/* =========================================================
+   GLOBAL KEYBOARD FOCUS RING
+   Only for keyboard users (:focus-visible), so mouse clicks stay clean.
+   Individual components may still override this with their own ring.
+   ========================================================= */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid rgba(21, 125, 255, 0.55);
+  outline-offset: 3px;
+  border-radius: 6px;
+}

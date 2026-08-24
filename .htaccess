@@ -6,3 +6,59 @@
   AddType image/avif .avif
   AddType image/webp .webp
 </IfModule>
+
+# ---------------------------------------------------------------------------
+# Friendly error page
+# ---------------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+# ---------------------------------------------------------------------------
+# Keep the raw data store and the shared auth include (which holds the admin
+# credentials) out of reach — only the api/*.php endpoints may read them.
+# ---------------------------------------------------------------------------
+<IfModule mod_authz_core.c>
+  <FilesMatch "^auth\.php$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+
+RedirectMatch 404 ^/data/.*\.json$
+RedirectMatch 404 ^/dist_chunks/
+RedirectMatch 404 ^/scripts/
+
+# Uploaded files are user-supplied: never execute anything in there.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^assets/uploads/.*\.(php|phtml|phar|cgi|pl)$ - [F,L]
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Baseline security headers
+# ---------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Compression + caching. Stylesheets and modules are versioned with ?v=N, so
+# they can be cached hard; HTML must stay fresh.
+# ---------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml \
+    application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                "access plus 1 year"
+  ExpiresByType application/javascript  "access plus 1 year"
+  ExpiresByType image/png               "access plus 6 months"
+  ExpiresByType image/jpeg              "access plus 6 months"
+  ExpiresByType image/avif              "access plus 6 months"
+  ExpiresByType image/webp              "access plus 6 months"
+  ExpiresByType image/svg+xml           "access plus 6 months"
+  ExpiresByType text/html               "access plus 0 seconds"
+</IfModule>

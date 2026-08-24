@@ -9,18 +9,26 @@ $file   = $_FILES['image'];
 $error  = $file['error'];
 $size   = $file['size'];
 $tmpPath = $file['tmp_name'];
-$origName = $file['name'];
 
 /* Validate */
 if ($error !== UPLOAD_ERR_OK) fail('Upload error code: ' . $error);
 if ($size > 10 * 1024 * 1024) fail('File too large. Max 10 MB.');
 
-$allowed = ['image/jpeg', 'image/png', 'image/webp', 'image/avif', 'image/gif'];
-$mime    = mime_content_type($tmpPath);
-if (!in_array($mime, $allowed)) fail('Invalid file type: ' . $mime);
+/* The extension is derived from the sniffed MIME type, never from the
+   uploaded filename: a genuine GIF named "x.php" would otherwise be stored
+   as PHP inside the web root and become executable. */
+$allowed = [
+    'image/jpeg' => 'jpg',
+    'image/png'  => 'png',
+    'image/webp' => 'webp',
+    'image/avif' => 'avif',
+    'image/gif'  => 'gif',
+];
+$mime = mime_content_type($tmpPath);
+if (!isset($allowed[$mime])) fail('Invalid file type: ' . $mime);
 
-$ext  = pathinfo($origName, PATHINFO_EXTENSION) ?: explode('/', $mime)[1];
-$name = uniqid('img_', true) . '.' . strtolower($ext);
+$ext  = $allowed[$mime];
+$name = uniqid('img_', true) . '.' . $ext;
 
 if (!is_dir(UPLOADS_DIR)) mkdir(UPLOADS_DIR, 0755, true);
 

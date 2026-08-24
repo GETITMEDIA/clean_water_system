@@ -1,0 +1,11 @@
+# Build/zip artefacts — ~94 MB of chunked archives, not source
+dist_chunks/
+.dist/
+
+# Admin uploads are runtime content, not part of the site source
+assets/uploads/
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
