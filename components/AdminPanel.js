@@ -453,12 +453,12 @@ export default class AdminPanel {
         <tbody>
           ${list.map(p => `
             <tr>
-              <td>${p.image ? `<img class="adm-table-thumb" src="${this._esc(p.image)}" alt="">` : `<div class="adm-table-thumb-placeholder">No img</div>`}</td>
-              <td style="font-weight:600;">${this._esc(p.name)}</td>
-              <td><span class="adm-badge adm-badge-blue">${this._esc(catMap[p.category] ?? p.category ?? '—')}</span></td>
-              <td style="font-weight:600;color:#062b63;">₹${(p.variants?.[0]?.price ?? 0).toLocaleString('en-IN')}</td>
-              <td><span class="adm-badge adm-badge-green">${p.variants?.length ?? 0} options</span></td>
-              <td>
+              <td data-label="Image" class="adm-td-img">${p.image ? `<img class="adm-table-thumb" src="${this._esc(p.image)}" alt="">` : `<div class="adm-table-thumb-placeholder">No img</div>`}</td>
+              <td data-label="Name" style="font-weight:600;">${this._esc(p.name)}</td>
+              <td data-label="Category"><span class="adm-badge adm-badge-blue">${this._esc(catMap[p.category] ?? p.category ?? '—')}</span></td>
+              <td data-label="From Price" style="font-weight:600;color:#062b63;">₹${(p.variants?.[0]?.price ?? 0).toLocaleString('en-IN')}</td>
+              <td data-label="Variants"><span class="adm-badge adm-badge-green">${p.variants?.length ?? 0} options</span></td>
+              <td data-label="Actions">
                 <div class="adm-tbl-actions">
                   <button class="adm-btn adm-btn-secondary adm-btn-sm adm-btn-icon edit-btn" data-id="${this._esc(p.id)}" title="Edit">
                     ${this._ico('edit')}
@@ -893,11 +893,11 @@ export default class AdminPanel {
         <tbody>
           ${this.categories.map((c, i) => `
             <tr>
-              <td style="color:#94a3b8;">${i + 1}</td>
-              <td style="font-weight:600;">${this._esc(c.name)}</td>
-              <td><code style="font-size:12px;color:#64748b;">${this._esc(c.id)}</code></td>
-              <td><span class="adm-badge adm-badge-blue">${productCount(c.id)}</span></td>
-              <td>
+              <td data-label="#" style="color:#94a3b8;">${i + 1}</td>
+              <td data-label="Name" style="font-weight:600;">${this._esc(c.name)}</td>
+              <td data-label="ID (Slug)"><code style="font-size:12px;color:#64748b;">${this._esc(c.id)}</code></td>
+              <td data-label="Products"><span class="adm-badge adm-badge-blue">${productCount(c.id)}</span></td>
+              <td data-label="Actions">
                 <div class="adm-tbl-actions">
                   <button class="adm-btn adm-btn-secondary adm-btn-sm adm-btn-icon cat-edit-btn" data-id="${this._esc(c.id)}" data-name="${this._esc(c.name)}" title="Edit">${this._ico('edit')}</button>
                   <button class="adm-btn adm-btn-sm adm-btn-icon cat-delete-btn" style="background:rgba(239,68,68,0.08);color:#ef4444;" data-id="${this._esc(c.id)}" title="Delete">${this._ico('trash')}</button>
