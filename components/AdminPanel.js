@@ -164,7 +164,7 @@ export default class AdminPanel {
       <div class="adm-login-wrap">
         <div class="adm-login-card">
           <div class="adm-login-logo">
-            <img src="assets/images/logo.jpeg" alt="Clean Water System" width="42" height="42"/>
+            <img src="assets/images/logo.png" alt="Clean Water System" width="42" height="42"/>
             <div class="adm-login-logo-text">
               <span class="adm-login-logo-title">CLEAN WATER</span>
               <span class="adm-login-logo-sub">Admin Panel</span>
@@ -224,7 +224,7 @@ export default class AdminPanel {
         <div class="adm-sidebar-overlay" id="sidebarOverlay" style="display:none;"></div>
         <aside class="adm-sidebar" id="sidebar">
           <div class="adm-sidebar-logo">
-            <img src="assets/images/logo.jpeg" alt="Clean Water System" width="36" height="36"/>
+            <img src="assets/images/logo.png" alt="Clean Water System" width="36" height="36"/>
             <div class="adm-sidebar-logo-text">
               <span class="adm-sidebar-logo-title">Clean Water</span>
               <span class="adm-sidebar-logo-sub">Admin</span>
