@@ -224,6 +224,11 @@
   .ws-hero-cta { justify-content: center; }
 }
 
+/* Hide decorative dashed ring on tablet and mobile; desktop keeps them */
+@media (max-width: 1080px) {
+  .ws-hero-ring { display: none !important; }
+}
+
 @media (max-width: 640px) {
   .ws-hero { padding: 130px 20px 60px; }
   .ws-hero-heading { font-size: 34px; }

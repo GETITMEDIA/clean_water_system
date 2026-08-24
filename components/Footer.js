@@ -107,7 +107,7 @@ export default class Footer {
 
           <div class="footer-col footer-col-brand">
             <a href="index.html#home" class="footer-logo">
-              <img src="assets/images/logo.avif" alt="Clean Water System" class="footer-logo-img" width="46" height="46">
+              <img src="assets/images/logo.jpeg" alt="Clean Water System" class="footer-logo-img" width="46" height="46">
               <span class="footer-logo-text">
                 <span class="footer-logo-title">CLEAN</span>
                 <span class="footer-logo-subtitle">WATER SYSTEM</span>

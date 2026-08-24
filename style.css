@@ -142,6 +142,7 @@ section[id],
 
 .navbar-logo-img {
   display: block;
+  mix-blend-mode: multiply;
   width: 52px;
   height: 52px;
   object-fit: contain;
@@ -526,10 +527,13 @@ section[id],
     display: none;
   }
 
-  .nav-link.active {
+  .nav-link.active,
+  .dropdown.open .dropdown-toggle {
     background: var(--light-blue);
     border-radius: 10px;
     padding-left: 14px;
+    color: var(--primary-blue);
+    font-weight: 600;
   }
 
   .dropdown-toggle {
@@ -547,13 +551,16 @@ section[id],
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    padding: 0 0 0 10px;
+    padding: 0 10px;
+    background: #f5f6f8;
+    border-radius: 10px;
+    margin-top: 5px;
     transition: max-height var(--transition-medium), padding var(--transition-fast);
   }
 
   .dropdown.open .dropdown-menu {
     max-height: 440px;
-    padding: 6px 0 6px 10px;
+    padding: 6px 10px;
   }
 
   /* Phone block AND the top-bar CTA button are both hidden once the

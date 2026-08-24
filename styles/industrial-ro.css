@@ -3,11 +3,22 @@
    product showcase for this single category page.
    ========================================================= */
 
-/* ---------- Hero ---------- */
+/* ---------- Hero ----------
+   Desktop uses the wide hero1.png, whose machinery sits on the left, so the
+   copy card is anchored right over the empty water. Tablet/mobile swap in the
+   square crops via <picture>, where the card spans the full width at the
+   bottom over a gradient scrim. */
 .irp-hero {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
-  line-height: 0;
+  line-height: 1;
+  background: #001233;
+}
+
+.irp-hero-picture {
+  display: block;
+  width: 100%;
 }
 
 .irp-hero-img {
@@ -16,24 +27,63 @@
   height: auto;
 }
 
-.irp-hero-banner {
-  position: relative;
-  margin-top: -1px;
-  padding: 20px 24px;
-  background: linear-gradient(100deg, #062b63 0%, #0d5ef4 60%, #157dff 100%);
-  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+/* Scrim keeps the copy readable without dimming the whole photograph. */
+.irp-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 18, 51, 0) 30%,
+    rgba(0, 18, 51, 0.55) 62%,
+    rgba(0, 18, 51, 0.8) 100%
+  );
+  pointer-events: none;
 }
 
-.irp-hero-banner p {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 12px;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.6;
-  color: #ffffff;
-  text-align: right;
+.irp-hero-overlay {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: max(24px, calc((100% - 1200px) / 2));
+  transform: translateY(-50%);
+  max-width: 480px;
+  padding: 32px 34px;
+  color: #fff;
+  background: rgba(0, 18, 51, 0.42);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0, 10, 35, 0.45);
 }
+
+.irp-hero-overlay h1 {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 14px;
+}
+
+/* Small accent rule under the heading, matching the showcase underlines. */
+.irp-hero-overlay h1::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin-top: 16px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #157dff, #6fd0ff);
+}
+
+.irp-hero-overlay p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.88);
+}
+
 
 /* ---------- Product showcase ---------- */
 .irp-showcase {
@@ -132,6 +182,74 @@
 }
 
 /* ---------- Responsive ---------- */
+/* ---------- Hero: tablet + mobile ----------
+   The square crops would otherwise run ~1000px tall, so they are cropped to a
+   fixed band and the card drops to the bottom edge, clear of the fixed navbar. */
+@media (max-width: 900px) {
+  .irp-hero-img {
+    height: 460px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .irp-hero::after {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 18, 51, 0.45) 0%,
+      rgba(0, 18, 51, 0) 30%,
+      rgba(0, 18, 51, 0.75) 72%,
+      rgba(0, 18, 51, 0.92) 100%
+    );
+  }
+  .irp-hero-overlay {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    max-width: none;
+    padding: 26px 24px 30px;
+    text-align: center;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .irp-hero-overlay h1 {
+    font-size: 30px;
+  }
+  .irp-hero-overlay h1::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .irp-hero-overlay p {
+    font-size: 15.5px;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 520px) {
+  .irp-hero-img {
+    height: 400px;
+  }
+  .irp-hero-overlay {
+    padding: 22px 18px 26px;
+  }
+  .irp-hero-overlay h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .irp-hero-overlay h1::after {
+    width: 52px;
+    height: 3px;
+    margin-top: 12px;
+  }
+  .irp-hero-overlay p {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 900px) {
   .irp-row,
   .irp-row:nth-child(even) {
@@ -147,17 +265,9 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .irp-hero-banner p {
-    text-align: center;
-    font-size: 13.5px;
-  }
 }
 
 @media (max-width: 520px) {
-  .irp-hero-banner {
-    padding: 18px 18px 22px;
-    clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%);
-  }
   .irp-row-text h2 {
     font-size: 22px;
   }
