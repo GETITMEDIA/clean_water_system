@@ -245,17 +245,6 @@
 .hs-splash.is-bursting .hs-ring-a { animation: hs-ring-burst 1s ease-out; }
 .hs-splash.is-bursting .hs-ring-b { animation: hs-ring-burst 1.15s ease-out 0.1s; }
 
-.hs-wave {
-  position: absolute;
-  left: 4%;
-  right: 4%;
-  bottom: 10%;
-  width: 92%;
-  height: auto;
-  opacity: 0.85;
-  animation: hs-wave-bob 5s ease-in-out infinite;
-}
-
 .hs-droplet {
   position: absolute;
   left: calc(50% + (var(--d) - 3) * 30px);
@@ -337,11 +326,6 @@
 @keyframes hs-glow-pulse {
   0%, 100% { opacity: 0.35; transform: translate(-50%, -50%) scale(1); }
   50%      { opacity: 0.6;  transform: translate(-50%, -50%) scale(1.14); }
-}
-
-@keyframes hs-wave-bob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-9px); }
 }
 
 @keyframes hs-ring-burst {
@@ -455,7 +439,6 @@
 @media (prefers-reduced-motion: reduce) {
   .hs-bg { animation: none; }
   .hs-glow { animation: none; }
-  .hs-wave { animation: none; }
   .hs-ring, .hs-droplet { animation: none !important; }
   .hs-slide, .hs-slide-text > *, .hs-product-img { transition-duration: 0.01s; }
 }

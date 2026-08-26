@@ -109,15 +109,6 @@ export default class HeroSlider {
             <span class="hs-ring hs-ring-a"></span>
             <span class="hs-ring hs-ring-b"></span>
             <span class="hs-glow"></span>
-            <svg class="hs-wave" viewBox="0 0 600 120" preserveAspectRatio="none">
-              <path d="M0,70 C100,30 200,100 300,60 C400,20 500,90 600,50 L600,120 L0,120 Z" fill="url(#hsWaveGrad${i})"/>
-              <defs>
-                <linearGradient id="hsWaveGrad${i}" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#5bb8ff" stop-opacity="0.55"/>
-                  <stop offset="100%" stop-color="#0d5ef4" stop-opacity="0.05"/>
-                </linearGradient>
-              </defs>
-            </svg>
             ${[...Array(7)].map((_, d) => `<span class="hs-droplet" style="--d:${d}"></span>`).join('')}
           </div>
           <img class="hs-product-img" src="${s.image}" alt="${s.alt}" loading="${i === 0 ? 'eager' : 'lazy'}">
