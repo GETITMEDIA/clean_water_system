@@ -8,7 +8,7 @@ const TESTIMONIALS = [
   {
     text: 'The water quality has completely transformed since installing the Clean Water System RO purifier. My family now drinks directly from the tap without any worries. The taste is crystal clear!',
     name: 'Rajesh Kumar',
-    location: 'Mumbai, Maharashtra',
+    location: 'Lawspet, Pondicherry',
     product: 'Domestic RO Purifier',
     initial: 'R',
     rating: 5,
@@ -16,7 +16,7 @@ const TESTIMONIALS = [
   {
     text: 'Installation was completed within 2 hours by their certified technician. Very professional team. The water tastes incredibly pure and our electric kettle no longer has white deposits!',
     name: 'Priya Sharma',
-    location: 'New Delhi',
+    location: 'Reddiarpalayam, Pondicherry',
     product: 'Water Softener Plant',
     initial: 'P',
     rating: 5,
@@ -24,7 +24,7 @@ const TESTIMONIALS = [
   {
     text: 'We installed the industrial RO plant for our restaurant 8 months ago. Zero complaints, zero maintenance issues. The water is consistently pure and our customers have noticed the difference in food quality.',
     name: 'Arjun Nair',
-    location: 'Bengaluru, Karnataka',
+    location: 'Rainbow Nagar, Pondicherry',
     product: 'Commercial RO Plant',
     initial: 'A',
     rating: 5,
@@ -32,7 +32,7 @@ const TESTIMONIALS = [
   {
     text: 'My children had frequent stomach issues due to contaminated water. After installing Clean Water System, their health has dramatically improved. Best investment we have ever made for our family.',
     name: 'Sunita Patel',
-    location: 'Ahmedabad, Gujarat',
+    location: 'Nellitope, Pondicherry',
     product: 'Domestic RO Purifier',
     initial: 'S',
     rating: 5,
@@ -40,7 +40,7 @@ const TESTIMONIALS = [
   {
     text: 'The after-sales service is exceptional. They respond within 24 hours and the annual maintenance is very thorough. Worth every rupee. Highly recommend to anyone looking for reliable water purification.',
     name: 'Mohammed Ali',
-    location: 'Hyderabad, Telangana',
+    location: 'Muthialpet, Pondicherry',
     product: 'Multibrand Water Purifier',
     initial: 'M',
     rating: 5,
@@ -48,7 +48,7 @@ const TESTIMONIALS = [
   {
     text: 'We installed their iron removal plant for our overhead tank. The water used to leave orange stains on everything. Now it is crystal clear! The team was professional and the results are outstanding.',
     name: 'Lakshmi Iyer',
-    location: 'Chennai, Tamil Nadu',
+    location: 'Kadirgamam, Pondicherry',
     product: 'Iron Removal Plant',
     initial: 'L',
     rating: 5,

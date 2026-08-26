@@ -319,3 +319,66 @@
     .hs-inner { height: 100svh; }
   }
 }
+
+
+/* =========================================================
+   6. GLOBAL MOBILE TYPOGRAPHY REDUCTIONS
+   ========================================================= */
+
+/* ----- Tablets/Mids (<= 768px) ----- */
+@media (max-width: 768px) {
+  /* Hero / Big Section Titles */
+  .hs-heading { font-size: 32px !important; }
+  .products-title { font-size: 26px !important; }
+  .ts-title { font-size: 26px !important; }
+  .products-page-title { font-size: 28px !important; }
+  .ws-hero-title, .alc-hero-title, .iro-hero-title, .pd-hero-title { font-size: 28px !important; }
+  .ap-hero-heading, .contact-hero-title, .gallery-hero h1 { font-size: 28px !important; }
+
+  /* Subheadings / Section Titles */
+  .quote-heading h2 { font-size: 22px !important; }
+  .ap-who-title, .ap-mv-title, .ap-values-title, .ap-feat-title, .ap-cta-text h2 { font-size: 22px !important; }
+  .contact-title, .contact-cta-card h2, .services-title, .services-process h2 { font-size: 22px !important; }
+  .ws-cta-card h2, .alc-cta-card h2, .iro-cta-card h2 { font-size: 22px !important; }
+  
+  /* Paragraphs & Descriptions */
+  .hs-desc, .products-desc, .ts-text, .quote-subtitle, .quote-perk p,
+  .ap-hero-desc, .ap-who-desc, .ap-values-desc, .ap-mv-desc, .ap-feat-desc, .ap-feat-list li,
+  .contact-hero-desc, .contact-desc, .contact-info-card p, .contact-reasons-desc,
+  .products-page-subtitle, .product-card-desc,
+  .services-subtitle, .service-card-desc, .process-step-desc,
+  .ws-hero-desc, .alc-hero-desc, .iro-hero-desc, .ws-row-desc, .alc-row-desc, .iro-row-desc,
+  .pd-hero-desc, .pd-desc {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* ----- Mobile Phones (<= 480px) ----- */
+@media (max-width: 480px) {
+  /* Hero / Big Section Titles */
+  .hs-heading { font-size: 24px !important; }
+  .products-title { font-size: 22px !important; }
+  .ts-title { font-size: 22px !important; }
+  .products-page-title { font-size: 24px !important; }
+  .ws-hero-title, .alc-hero-title, .iro-hero-title, .pd-hero-title { font-size: 24px !important; }
+  .ap-hero-heading, .contact-hero-title, .gallery-hero h1 { font-size: 24px !important; }
+
+  /* Subheadings / Section Titles */
+  .quote-heading h2 { font-size: 19px !important; }
+  .ap-who-title, .ap-mv-title, .ap-values-title, .ap-feat-title, .ap-cta-text h2 { font-size: 19px !important; }
+  .contact-title, .contact-cta-card h2, .services-title, .services-process h2 { font-size: 19px !important; }
+  .ws-cta-card h2, .alc-cta-card h2, .iro-cta-card h2 { font-size: 19px !important; }
+  
+  /* Paragraphs & Descriptions */
+  .hs-desc, .products-desc, .ts-text, .quote-subtitle, .quote-perk p,
+  .ap-hero-desc, .ap-who-desc, .ap-values-desc, .ap-mv-desc, .ap-feat-desc, .ap-feat-list li,
+  .contact-hero-desc, .contact-desc, .contact-info-card p, .contact-reasons-desc,
+  .products-page-subtitle, .product-card-desc,
+  .services-subtitle, .service-card-desc, .process-step-desc,
+  .ws-hero-desc, .alc-hero-desc, .iro-hero-desc, .ws-row-desc, .alc-row-desc, .iro-row-desc,
+  .pd-hero-desc, .pd-desc {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+}

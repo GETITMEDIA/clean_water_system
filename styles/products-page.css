@@ -72,10 +72,12 @@
   padding-top: 0;
 }
 
-/* Subtle wave-line divider under each homepage category section */
+/* Single wave-line divider between homepage category sections.
+   One element only — the section's old full-width `.bg-waterline`
+   was removed so two lines no longer stack up in the same gap. */
 .premium-products-inner .product-category-section:not(:last-child) {
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 56px;
 }
 
 .premium-products-inner .product-category-section:not(:last-child)::after {
@@ -83,12 +85,37 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 10px;
-  height: 28px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Ccircle cx='905' cy='10' r='3' fill='%23a9c9f5'/%3E%3Cpath d='M0,38 C240,10 480,55 720,32 C960,10 1200,55 1440,32' fill='none' stroke='%23c3ddf8' stroke-width='1.5'/%3E%3C/svg%3E");
+  bottom: 8px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 C240,2 480,38 720,20 C960,2 1200,38 1440,20' fill='none' stroke='rgba(21,125,255,0.28)' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: 100% 100%;
   pointer-events: none;
+}
+
+/* Tablet: shorter gap, slightly flatter wave */
+@media (max-width: 1024px) {
+  .premium-products-inner .product-category-section:not(:last-child) {
+    padding-bottom: 46px;
+  }
+  .premium-products-inner .product-category-section:not(:last-child)::after {
+    height: 18px;
+    bottom: 6px;
+  }
+}
+
+/* Phone: the wave is squeezed into ~320px, so keep it short and
+   thin, otherwise it reads as a fat squiggle instead of a divider */
+@media (max-width: 640px) {
+  .premium-products-inner .product-category-section:not(:last-child) {
+    padding-bottom: 36px;
+  }
+  .premium-products-inner .product-category-section:not(:last-child)::after {
+    height: 12px;
+    bottom: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 C360,4 1080,36 1440,20' fill='none' stroke='rgba(21,125,255,0.26)' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
 }
 
 .category-heading {

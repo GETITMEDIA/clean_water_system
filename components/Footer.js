@@ -34,8 +34,6 @@ const PRODUCT_LINKS = [
 const SOCIAL_LINKS = [
   { label: 'Facebook', href: '#', icon: 'facebook' },
   { label: 'Instagram', href: 'https://www.instagram.com/popular/cleaning-water-systems/', icon: 'instagram' },
-  { label: 'LinkedIn', href: '#', icon: 'linkedin' },
-  { label: 'YouTube', href: '#', icon: 'youtube' },
 ];
 
 const ICONS = {
